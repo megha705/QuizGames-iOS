@@ -94,7 +94,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="onCarsQuiz:" destination="jyR-X0-9oM" eventType="touchUpInside" id="IYb-Qr-ndG"/>
+                                            <action selector="onCarsQuizTap:" destination="jyR-X0-9oM" eventType="touchUpInside" id="XES-f2-LHg"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p2z-e0-mGt">
@@ -103,12 +103,18 @@
                                         <state key="normal" title="Logos Quiz">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onLogosQuizTap:" destination="jyR-X0-9oM" eventType="touchUpInside" id="3LD-LC-Ozh"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hV4-SD-36F">
                                         <rect key="frame" x="0.0" y="70" width="87" height="30"/>
                                         <state key="normal" title="Cities Quiz">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onCitiesQuizTap:" destination="jyR-X0-9oM" eventType="touchUpInside" id="KUI-Wh-Til"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -155,22 +161,72 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dice_wallpaper" translatesAutoresizingMaskIntoConstraints="NO" id="Hdu-qU-lz3">
-                                <rect key="frame" x="20" y="20" width="560" height="580"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ea5-Dg-FKm">
+                                <rect key="frame" x="20" y="110" width="560" height="190"/>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fG6-Ho-x8T">
+                                <rect key="frame" x="20" y="330" width="560" height="150"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mIg-uf-4SX">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="30"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onSelectionButtonTap:" destination="pkO-mW-Xxq" eventType="touchUpInside" id="vPI-HM-Puj"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8r5-u2-nSo">
+                                        <rect key="frame" x="0.0" y="40" width="560" height="30"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onSelectionButtonTap:" destination="pkO-mW-Xxq" eventType="touchUpInside" id="5pf-WK-xVa"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u2X-2f-L1g">
+                                        <rect key="frame" x="0.0" y="80" width="560" height="30"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onSelectionButtonTap:" destination="pkO-mW-Xxq" eventType="touchUpInside" id="uiR-oj-Goo"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8gv-lb-FNL">
+                                        <rect key="frame" x="0.0" y="120" width="560" height="30"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onSelectionButtonTap:" destination="pkO-mW-Xxq" eventType="touchUpInside" id="qKQ-RH-Phk"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                         <constraints>
-                            <constraint firstItem="Hdu-qU-lz3" firstAttribute="top" secondItem="bUD-o4-7bz" secondAttribute="bottom" id="XY7-dD-TYQ"/>
-                            <constraint firstItem="Hdu-qU-lz3" firstAttribute="leading" secondItem="l9x-Mw-yWL" secondAttribute="leadingMargin" id="ijg-43-KYW"/>
-                            <constraint firstItem="MXq-ws-sIX" firstAttribute="top" secondItem="Hdu-qU-lz3" secondAttribute="bottom" id="ka0-AH-iLX"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Hdu-qU-lz3" secondAttribute="trailing" id="sot-hW-CrJ"/>
+                            <constraint firstItem="fG6-Ho-x8T" firstAttribute="leading" secondItem="Ea5-Dg-FKm" secondAttribute="leading" id="JMO-Kc-SeC"/>
+                            <constraint firstItem="fG6-Ho-x8T" firstAttribute="top" secondItem="Ea5-Dg-FKm" secondAttribute="bottom" constant="30" id="ViE-tX-3J8"/>
+                            <constraint firstItem="Ea5-Dg-FKm" firstAttribute="top" secondItem="bUD-o4-7bz" secondAttribute="bottom" constant="90" id="ZIZ-qZ-PYc"/>
+                            <constraint firstItem="Ea5-Dg-FKm" firstAttribute="trailing" secondItem="l9x-Mw-yWL" secondAttribute="trailingMargin" id="eTw-Bp-Nb1"/>
+                            <constraint firstItem="Ea5-Dg-FKm" firstAttribute="leading" secondItem="l9x-Mw-yWL" secondAttribute="leadingMargin" id="fsb-8h-cA4"/>
+                            <constraint firstItem="MXq-ws-sIX" firstAttribute="top" secondItem="Ea5-Dg-FKm" secondAttribute="bottom" constant="300" id="wkc-t4-lPp"/>
+                            <constraint firstItem="fG6-Ho-x8T" firstAttribute="trailing" secondItem="Ea5-Dg-FKm" secondAttribute="trailing" id="ztu-os-6lF"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="selection1" destination="mIg-uf-4SX" id="iNf-uB-HXd"/>
+                        <outlet property="selection2" destination="8r5-u2-nSo" id="05R-cx-IHs"/>
+                        <outlet property="selection3" destination="u2X-2f-L1g" id="ZQT-HL-99R"/>
+                        <outlet property="selection4" destination="8gv-lb-FNL" id="ZPc-5a-kiM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Ii-Bb-mxO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4189" y="429"/>
+            <point key="canvasLocation" x="4337" y="538"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="S2N-gV-PF6">

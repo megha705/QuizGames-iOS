@@ -10,28 +10,43 @@ import UIKit
 
 class QuizViewController: UIViewController {
     var pageIndex: Int = 0
-    var strTitle: String!
-    var strPhotoName: String!
+    var quizChoices: [QuizChoice]?
+    @IBOutlet weak var selection1: UIButton!
+    @IBOutlet weak var selection2: UIButton!
+    @IBOutlet weak var selection3: UIButton!
+    @IBOutlet weak var selection4: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        var buttons = [selection1, selection2, selection3, selection4]
+        for i in 0 ..< buttons.count {
+            buttons[i].setTitle(quizChoices![i].choice, forState: .Normal)
+            buttons[i].tag = quizChoices![i].isRightChoice!
+            buttons[i].layer.cornerRadius = 5
+            buttons[i].layer.borderWidth = 1
+            buttons[i].layer.borderColor = UIColor.whiteColor().CGColor
+        }
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func onSelectionButtonTap(sender: AnyObject) {
+        print(sender.tag)
     }
-    */
-
+    
+    /*
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		854A19631CCBD67D004C5B9C /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854A19621CCBD67D004C5B9C /* Util.swift */; };
+		854A19661CCBDAE7004C5B9C /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854A19651CCBDAE7004C5B9C /* Quiz.swift */; };
+		854A19681CCBDC11004C5B9C /* QuizChoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854A19671CCBDC11004C5B9C /* QuizChoice.swift */; };
+		854A196A1CCBE77A004C5B9C /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854A19691CCBE77A004C5B9C /* extensions.swift */; };
 		85790F141CCA8D9200C7022C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85790F131CCA8D9200C7022C /* AppDelegate.swift */; };
 		85790F161CCA8D9200C7022C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85790F151CCA8D9200C7022C /* MainViewController.swift */; };
 		85790F191CCA8D9200C7022C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85790F171CCA8D9200C7022C /* Main.storyboard */; };
@@ -32,6 +36,10 @@
 /* Begin PBXFileReference section */
 		5F003A15E1EEE1B3A806CFE4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		800B31AC317C137511F15757 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		854A19621CCBD67D004C5B9C /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		854A19651CCBDAE7004C5B9C /* Quiz.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
+		854A19671CCBDC11004C5B9C /* QuizChoice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizChoice.swift; sourceTree = "<group>"; };
+		854A19691CCBE77A004C5B9C /* extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
 		85790F101CCA8D9100C7022C /* QuizGames.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuizGames.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85790F131CCA8D9200C7022C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85790F151CCA8D9200C7022C /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +84,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		854A19641CCBDAB6004C5B9C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				854A19651CCBDAE7004C5B9C /* Quiz.swift */,
+				854A19671CCBDC11004C5B9C /* QuizChoice.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		85790F071CCA8D9100C7022C = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +116,7 @@
 		85790F121CCA8D9200C7022C /* QuizGames */ = {
 			isa = PBXGroup;
 			children = (
+				854A19641CCBDAB6004C5B9C /* Model */,
 				85790F131CCA8D9200C7022C /* AppDelegate.swift */,
 				85790F151CCA8D9200C7022C /* MainViewController.swift */,
 				85790F171CCA8D9200C7022C /* Main.storyboard */,
@@ -108,6 +126,8 @@
 				85FAAD031CCB70360091EC9C /* QuizGamesSelectionViewController.swift */,
 				85FAAD351CCB96BF0091EC9C /* QuizPageViewController.swift */,
 				85FAAD371CCB96DB0091EC9C /* QuizViewController.swift */,
+				854A19621CCBD67D004C5B9C /* Util.swift */,
+				854A19691CCBE77A004C5B9C /* extensions.swift */,
 			);
 			path = QuizGames;
 			sourceTree = "<group>";
@@ -182,6 +202,7 @@
 				TargetAttributes = {
 					85790F0F1CCA8D9100C7022C = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = FF4Z28L2UT;
 					};
 					85790F231CCA8D9200C7022C = {
 						CreatedOnToolsVersion = 7.3;
@@ -282,10 +303,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				85FAAD041CCB70360091EC9C /* QuizGamesSelectionViewController.swift in Sources */,
+				854A19631CCBD67D004C5B9C /* Util.swift in Sources */,
+				854A19661CCBDAE7004C5B9C /* Quiz.swift in Sources */,
 				85790F161CCA8D9200C7022C /* MainViewController.swift in Sources */,
 				85790F141CCA8D9200C7022C /* AppDelegate.swift in Sources */,
+				854A196A1CCBE77A004C5B9C /* extensions.swift in Sources */,
 				85FAAD381CCB96DB0091EC9C /* QuizViewController.swift in Sources */,
 				85FAAD361CCB96BF0091EC9C /* QuizPageViewController.swift in Sources */,
+				854A19681CCBDC11004C5B9C /* QuizChoice.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,10 +442,13 @@
 			baseConfigurationReference = 800B31AC317C137511F15757 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = QuizGames/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.sourcestream.QuizGames;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -429,10 +457,13 @@
 			baseConfigurationReference = 5F003A15E1EEE1B3A806CFE4 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = QuizGames/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.sourcestream.QuizGames;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

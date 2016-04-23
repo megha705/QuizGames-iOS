@@ -36,17 +36,22 @@ class QuizGamesSelectionViewController: UIViewController {
     }
     
     
-    @IBAction func onCarsQuiz(sender: AnyObject) {
+    @IBAction func onCarsQuizTap(sender: AnyObject) {
         performSegueWithIdentifier("cars", sender: sender)
+    }
+    
+    @IBAction func onLogosQuizTap(sender: AnyObject) {
+        performSegueWithIdentifier("logos", sender: sender)
+    }
+    
+    @IBAction func onCitiesQuizTap(sender: AnyObject) {
+        performSegueWithIdentifier("cities", sender: sender)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         let identifier = segue.identifier
-        if identifier == "cars" {
-         //    let destVc = (segue.destinationViewController as! QuizPageViewController)
-        }
+        let destVc = (segue.destinationViewController as! QuizPageViewController)
+        destVc.quizType = identifier
     }
-    
-    
     
 }
