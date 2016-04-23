@@ -34,5 +34,19 @@ class QuizGamesSelectionViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    
+    @IBAction func onCarsQuiz(sender: AnyObject) {
+        performSegueWithIdentifier("cars", sender: sender)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        let identifier = segue.identifier
+        if identifier == "cars" {
+         //    let destVc = (segue.destinationViewController as! QuizPageViewController)
+        }
+    }
+    
+    
+    
 }

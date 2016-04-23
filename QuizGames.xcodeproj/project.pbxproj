@@ -14,6 +14,8 @@
 		85790F1E1CCA8D9200C7022C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85790F1C1CCA8D9200C7022C /* LaunchScreen.storyboard */; };
 		85790F291CCA8D9200C7022C /* QuizGamesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85790F281CCA8D9200C7022C /* QuizGamesTests.swift */; };
 		85FAAD041CCB70360091EC9C /* QuizGamesSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FAAD031CCB70360091EC9C /* QuizGamesSelectionViewController.swift */; };
+		85FAAD361CCB96BF0091EC9C /* QuizPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FAAD351CCB96BF0091EC9C /* QuizPageViewController.swift */; };
+		85FAAD381CCB96DB0091EC9C /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FAAD371CCB96DB0091EC9C /* QuizViewController.swift */; };
 		A4CBEFE482E34A5E5F7E25F1 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA8D6C1C5F0DA4EA0D399276 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +43,8 @@
 		85790F281CCA8D9200C7022C /* QuizGamesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizGamesTests.swift; sourceTree = "<group>"; };
 		85790F2A1CCA8D9200C7022C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		85FAAD031CCB70360091EC9C /* QuizGamesSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizGamesSelectionViewController.swift; sourceTree = "<group>"; };
+		85FAAD351CCB96BF0091EC9C /* QuizPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizPageViewController.swift; sourceTree = "<group>"; };
+		85FAAD371CCB96DB0091EC9C /* QuizViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		AA8D6C1C5F0DA4EA0D399276 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -102,6 +106,8 @@
 				85790F1C1CCA8D9200C7022C /* LaunchScreen.storyboard */,
 				85790F1F1CCA8D9200C7022C /* Info.plist */,
 				85FAAD031CCB70360091EC9C /* QuizGamesSelectionViewController.swift */,
+				85FAAD351CCB96BF0091EC9C /* QuizPageViewController.swift */,
+				85FAAD371CCB96DB0091EC9C /* QuizViewController.swift */,
 			);
 			path = QuizGames;
 			sourceTree = "<group>";
@@ -278,6 +284,8 @@
 				85FAAD041CCB70360091EC9C /* QuizGamesSelectionViewController.swift in Sources */,
 				85790F161CCA8D9200C7022C /* MainViewController.swift in Sources */,
 				85790F141CCA8D9200C7022C /* AppDelegate.swift in Sources */,
+				85FAAD381CCB96DB0091EC9C /* QuizViewController.swift in Sources */,
+				85FAAD361CCB96BF0091EC9C /* QuizPageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
