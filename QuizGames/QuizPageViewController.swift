@@ -25,7 +25,7 @@ class QuizPageViewController: UIPageViewController, UIPageViewControllerDataSour
                 // print(response.result)   // result of response serialization
                 
                 if let results = response.result.value {
-                   // print("JSON: \(results)")
+                    // print("JSON: \(results)")
                     var quizModel: Quiz?
                     for i in 0 ..< results.count {
                         let result = (results as! NSArray)[i] as! NSDictionary
@@ -123,6 +123,7 @@ class QuizPageViewController: UIPageViewController, UIPageViewControllerDataSour
         let pageContentViewController = self.storyboard?.instantiateViewControllerWithIdentifier("quizViewController") as! QuizViewController
         let quiz = quizList[index]
         pageContentViewController.quizChoices = quiz.quizChoices
+        pageContentViewController.quizImg = quiz.quizImage
         pageContentViewController.pageIndex = index
         return pageContentViewController
     }

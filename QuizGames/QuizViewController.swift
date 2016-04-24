@@ -11,14 +11,17 @@ import UIKit
 class QuizViewController: UIViewController {
     var pageIndex: Int = 0
     var quizChoices: [QuizChoice]?
+    var quizImg: String?
     @IBOutlet weak var selection1: UIButton!
     @IBOutlet weak var selection2: UIButton!
     @IBOutlet weak var selection3: UIButton!
     @IBOutlet weak var selection4: UIButton!
+    @IBOutlet weak var questionImg: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         var buttons = [selection1, selection2, selection3, selection4]
+        quizChoices?.shuffle()
         for i in 0 ..< buttons.count {
             buttons[i].setTitle(quizChoices![i].choice, forState: .Normal)
             buttons[i].tag = quizChoices![i].isRightChoice!
@@ -26,7 +29,7 @@ class QuizViewController: UIViewController {
             buttons[i].layer.borderWidth = 1
             buttons[i].layer.borderColor = UIColor.whiteColor().CGColor
         }
-        // Do any additional setup after loading the view.
+        questionImg.image = UIImage(named:quizImg!)
     }
     
     override func didReceiveMemoryWarning() {
