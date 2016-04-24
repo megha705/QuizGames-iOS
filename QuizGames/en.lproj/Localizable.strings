@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  QuizGames
+
+  Created by Radoslav on 4/24/16.
+  Copyright © 2016 Sourcestream. All rights reserved.
+*/
+
+"timeLeft" = "Time left: %@";
+"questionPosition" = "%@ of %@";

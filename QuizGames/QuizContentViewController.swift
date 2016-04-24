@@ -8,7 +8,7 @@
 
 import UIKit
 
-class QuizViewController: UIViewController {
+class QuizContentViewController: UIViewController {
     var pageIndex: Int = 0
     var quizChoices: [QuizChoice]?
     var quizImg: String?
@@ -27,7 +27,7 @@ class QuizViewController: UIViewController {
             buttons[i].tag = quizChoices![i].isRightChoice!
             buttons[i].layer.cornerRadius = 5
             buttons[i].layer.borderWidth = 1
-            buttons[i].layer.borderColor = UIColor.whiteColor().CGColor
+            buttons[i].layer.borderColor = UIColor.clearColor().CGColor
         }
         questionImg.image = UIImage(named:quizImg!)
     }

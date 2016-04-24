@@ -21,11 +21,12 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dice_wallpaper" translatesAutoresizingMaskIntoConstraints="NO" id="t6t-kI-0bg">
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="KYJ-dW-4tK">
-                                <rect key="frame" x="257" y="250" width="87" height="100"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="KYJ-dW-4tK">
+                                <rect key="frame" x="231" y="229" width="139" height="143"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FQb-nx-k5l">
-                                        <rect key="frame" x="0.0" y="0.0" width="87" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="139" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <state key="normal" title="Play">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         </state>
@@ -34,14 +35,16 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a1P-K2-dmu">
-                                        <rect key="frame" x="0.0" y="35" width="87" height="30"/>
-                                        <inset key="contentEdgeInsets" minX="5" minY="6" maxX="5" maxY="6"/>
+                                        <rect key="frame" x="0.0" y="51" width="139" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="6" maxX="10" maxY="6"/>
                                         <state key="normal" title="Top Scores">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WhT-qx-Cy0">
-                                        <rect key="frame" x="0.0" y="70" width="87" height="30"/>
+                                        <rect key="frame" x="0.0" y="102" width="139" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <state key="normal" title="About">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         </state>
@@ -73,7 +76,7 @@
         <!--Quiz Games Selection View Controller-->
         <scene sceneID="9am-CF-Pkw">
             <objects>
-                <viewController storyboardIdentifier="quizPageViewController" id="jyR-X0-9oM" customClass="QuizGamesSelectionViewController" customModule="QuizGames" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="jyR-X0-9oM" customClass="QuizGamesSelectionViewController" customModule="QuizGames" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vZM-AQ-5MN"/>
                         <viewControllerLayoutGuide type="bottom" id="xN7-FR-s21"/>
@@ -85,11 +88,12 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dice_wallpaper" translatesAutoresizingMaskIntoConstraints="NO" id="fpG-SM-cNr">
                                 <rect key="frame" x="0.0" y="20" width="600" height="580"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="AB2-ww-QoU">
-                                <rect key="frame" x="257" y="250" width="87" height="100"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="AB2-ww-QoU">
+                                <rect key="frame" x="230" y="229" width="141" height="143"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wyB-0w-URm">
-                                        <rect key="frame" x="0.0" y="0.0" width="87" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="141" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <state key="normal" title="Cars Quiz">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         </state>
@@ -98,8 +102,9 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p2z-e0-mGt">
-                                        <rect key="frame" x="0.0" y="35" width="87" height="30"/>
-                                        <inset key="contentEdgeInsets" minX="5" minY="6" maxX="5" maxY="6"/>
+                                        <rect key="frame" x="0.0" y="51" width="141" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="6" maxX="10" maxY="6"/>
                                         <state key="normal" title="Logos Quiz">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         </state>
@@ -108,7 +113,8 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hV4-SD-36F">
-                                        <rect key="frame" x="0.0" y="70" width="87" height="30"/>
+                                        <rect key="frame" x="0.0" y="102" width="141" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <state key="normal" title="Cities Quiz">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         </state>
@@ -132,27 +138,79 @@
                         <outlet property="carsQuizButton" destination="wyB-0w-URm" id="995-R1-n9d"/>
                         <outlet property="citiesQuizButton" destination="hV4-SD-36F" id="otm-KF-kjE"/>
                         <outlet property="logosQuizButton" destination="p2z-e0-mGt" id="DsB-HN-EvP"/>
-                        <segue destination="NyE-Hl-xyp" kind="show" identifier="cars" id="tku-ZQ-2Pi"/>
-                        <segue destination="NyE-Hl-xyp" kind="show" identifier="logos" id="YG7-ob-84h"/>
-                        <segue destination="NyE-Hl-xyp" kind="show" identifier="cities" id="sK4-iv-1rB"/>
+                        <segue destination="hOG-BJ-25N" kind="show" identifier="cars" id="DjS-zR-kM5"/>
+                        <segue destination="hOG-BJ-25N" kind="show" identifier="logos" id="7n5-8M-k0e"/>
+                        <segue destination="hOG-BJ-25N" kind="show" identifier="cities" id="olV-aL-1x6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3YD-5D-O18" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2834" y="429"/>
+            <point key="canvasLocation" x="2903" y="429"/>
         </scene>
-        <!--Quiz Page View Controller-->
+        <!--Page View Controller-->
         <scene sceneID="wb3-D0-Zmj">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="NyE-Hl-xyp" customClass="QuizPageViewController" customModule="QuizGames" customModuleProvider="target" sceneMemberID="viewController"/>
+                <pageViewController storyboardIdentifier="quizPageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="NyE-Hl-xyp" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QVi-bH-7q1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4099" y="112"/>
+            <point key="canvasLocation" x="4515" y="112"/>
         </scene>
-        <!--Quiz View Controller-->
+        <!--Quiz Page View Controller-->
+        <scene sceneID="zBU-pb-bAa">
+            <objects>
+                <viewController id="hOG-BJ-25N" customClass="QuizPageViewController" customModule="QuizGames" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SDh-K5-4WO"/>
+                        <viewControllerLayoutGuide type="bottom" id="0It-IC-2XB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="me9-mS-wqT">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 1020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bt6-sl-IED">
+                                <rect key="frame" x="20" y="30" width="92" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 of 20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vjh-uD-IfG">
+                                <rect key="frame" x="274" y="30" width="52" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time left: 20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gwp-Ao-Yh6">
+                                <rect key="frame" x="483" y="30" width="97" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="vjh-uD-IfG" firstAttribute="centerX" secondItem="me9-mS-wqT" secondAttribute="centerX" id="05k-yV-5UD"/>
+                            <constraint firstItem="gwp-Ao-Yh6" firstAttribute="top" secondItem="SDh-K5-4WO" secondAttribute="bottom" constant="10" id="IIz-eo-deA"/>
+                            <constraint firstItem="Bt6-sl-IED" firstAttribute="top" secondItem="SDh-K5-4WO" secondAttribute="bottom" constant="10" id="dNy-dj-SX4"/>
+                            <constraint firstItem="Bt6-sl-IED" firstAttribute="leading" secondItem="me9-mS-wqT" secondAttribute="leadingMargin" id="i9E-tL-deh"/>
+                            <constraint firstItem="gwp-Ao-Yh6" firstAttribute="trailing" secondItem="me9-mS-wqT" secondAttribute="trailingMargin" id="j8C-AQ-j3n"/>
+                            <constraint firstItem="vjh-uD-IfG" firstAttribute="top" secondItem="SDh-K5-4WO" secondAttribute="bottom" constant="10" id="oA8-ad-iqg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pageLabel" destination="vjh-uD-IfG" id="gGM-Bx-lHh"/>
+                        <outlet property="scoreLabel" destination="Bt6-sl-IED" id="RkU-85-H5Z"/>
+                        <outlet property="timeleftLabel" destination="gwp-Ao-Yh6" id="wiP-og-ak7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kKt-pQ-mOc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3827" y="112"/>
+        </scene>
+        <!--Quiz Content View Controller-->
         <scene sceneID="NzH-pk-ocr">
             <objects>
-                <viewController storyboardIdentifier="quizViewController" id="pkO-mW-Xxq" customClass="QuizViewController" customModule="QuizGames" customModuleProvider="target" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Ii-Bb-mxO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="quizContentViewController" id="pkO-mW-Xxq" customClass="QuizContentViewController" customModule="QuizGames" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bUD-o4-7bz"/>
                         <viewControllerLayoutGuide type="bottom" id="MXq-ws-sIX"/>
@@ -161,17 +219,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ea5-Dg-FKm">
-                                <rect key="frame" x="20" y="110" width="560" height="250"/>
-                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fG6-Ho-x8T">
-                                <rect key="frame" x="20" y="390" width="560" height="174"/>
+                                <rect key="frame" x="20" y="400" width="560" height="174"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mIg-uf-4SX">
                                         <rect key="frame" x="0.0" y="0.0" width="560" height="36"/>
+                                        <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Button">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
                                             <action selector="onSelectionButtonTap:" destination="pkO-mW-Xxq" eventType="touchUpInside" id="vPI-HM-Puj"/>
@@ -179,9 +235,10 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8r5-u2-nSo">
                                         <rect key="frame" x="0.0" y="46" width="560" height="36"/>
+                                        <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Button">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
                                             <action selector="onSelectionButtonTap:" destination="pkO-mW-Xxq" eventType="touchUpInside" id="5pf-WK-xVa"/>
@@ -189,9 +246,10 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u2X-2f-L1g">
                                         <rect key="frame" x="0.0" y="92" width="560" height="36"/>
+                                        <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Button">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
                                             <action selector="onSelectionButtonTap:" destination="pkO-mW-Xxq" eventType="touchUpInside" id="uiR-oj-Goo"/>
@@ -199,9 +257,10 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8gv-lb-FNL">
                                         <rect key="frame" x="0.0" y="138" width="560" height="36"/>
+                                        <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Button">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
                                             <action selector="onSelectionButtonTap:" destination="pkO-mW-Xxq" eventType="touchUpInside" id="qKQ-RH-Phk"/>
@@ -209,15 +268,18 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ea5-Dg-FKm">
+                                <rect key="frame" x="20" y="70" width="560" height="305"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="fG6-Ho-x8T" firstAttribute="leading" secondItem="Ea5-Dg-FKm" secondAttribute="leading" id="JMO-Kc-SeC"/>
-                            <constraint firstItem="fG6-Ho-x8T" firstAttribute="top" secondItem="Ea5-Dg-FKm" secondAttribute="bottom" constant="30" id="ViE-tX-3J8"/>
-                            <constraint firstItem="Ea5-Dg-FKm" firstAttribute="top" secondItem="bUD-o4-7bz" secondAttribute="bottom" constant="90" id="ZIZ-qZ-PYc"/>
+                            <constraint firstItem="fG6-Ho-x8T" firstAttribute="top" secondItem="Ea5-Dg-FKm" secondAttribute="bottom" constant="25" id="ViE-tX-3J8"/>
+                            <constraint firstItem="Ea5-Dg-FKm" firstAttribute="top" secondItem="bUD-o4-7bz" secondAttribute="bottom" constant="50" id="ZIZ-qZ-PYc"/>
                             <constraint firstItem="Ea5-Dg-FKm" firstAttribute="trailing" secondItem="l9x-Mw-yWL" secondAttribute="trailingMargin" id="eTw-Bp-Nb1"/>
                             <constraint firstItem="Ea5-Dg-FKm" firstAttribute="leading" secondItem="l9x-Mw-yWL" secondAttribute="leadingMargin" id="fsb-8h-cA4"/>
-                            <constraint firstItem="MXq-ws-sIX" firstAttribute="top" secondItem="Ea5-Dg-FKm" secondAttribute="bottom" constant="240" id="wkc-t4-lPp"/>
+                            <constraint firstItem="MXq-ws-sIX" firstAttribute="top" secondItem="Ea5-Dg-FKm" secondAttribute="bottom" constant="225" id="wkc-t4-lPp"/>
                             <constraint firstItem="fG6-Ho-x8T" firstAttribute="trailing" secondItem="Ea5-Dg-FKm" secondAttribute="trailing" id="ztu-os-6lF"/>
                         </constraints>
                     </view>
@@ -229,27 +291,8 @@
                         <outlet property="selection4" destination="8gv-lb-FNL" id="ZPc-5a-kiM"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7Ii-Bb-mxO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4843" y="112"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="ck7-El-4eM">
-            <objects>
-                <viewController id="x9n-9r-nAt" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="v0Y-zj-1k3"/>
-                        <viewControllerLayoutGuide type="bottom" id="TQm-Xy-J1n"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Z7r-dU-0XH">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="j41-Kd-CWM" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4073" y="835"/>
+            <point key="canvasLocation" x="5333" y="112"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="S2N-gV-PF6">
@@ -274,6 +317,6 @@
         <image name="dice_wallpaper" width="320" height="568"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="sK4-iv-1rB"/>
+        <segue reference="olV-aL-1x6"/>
     </inferredMetricsTieBreakers>
 </document>
