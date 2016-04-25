@@ -155,10 +155,10 @@
             </objects>
             <point key="canvasLocation" x="4515" y="112"/>
         </scene>
-        <!--Quiz Page View Controller-->
+        <!--Quiz Games-->
         <scene sceneID="zBU-pb-bAa">
             <objects>
-                <viewController id="hOG-BJ-25N" customClass="QuizPageViewController" customModule="QuizGames" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Quiz Games" id="hOG-BJ-25N" customClass="QuizPageViewController" customModule="QuizGames" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SDh-K5-4WO"/>
                         <viewControllerLayoutGuide type="bottom" id="0It-IC-2XB"/>
@@ -167,8 +167,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 1020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bt6-sl-IED">
-                                <rect key="frame" x="20" y="30" width="92" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bt6-sl-IED">
+                                <rect key="frame" x="20" y="30" width="64" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -200,16 +200,16 @@
                         <outlet property="pageLabel" destination="vjh-uD-IfG" id="gGM-Bx-lHh"/>
                         <outlet property="scoreLabel" destination="Bt6-sl-IED" id="RkU-85-H5Z"/>
                         <outlet property="timeleftLabel" destination="gwp-Ao-Yh6" id="wiP-og-ak7"/>
+                        <segue destination="o6u-n5-1Op" kind="presentation" identifier="showScore" id="gpk-7O-Wxc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kKt-pQ-mOc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3827" y="112"/>
+            <point key="canvasLocation" x="3807" y="112"/>
         </scene>
         <!--Quiz Content View Controller-->
         <scene sceneID="NzH-pk-ocr">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7Ii-Bb-mxO" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="quizContentViewController" id="pkO-mW-Xxq" customClass="QuizContentViewController" customModule="QuizGames" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bUD-o4-7bz"/>
@@ -291,8 +291,90 @@
                         <outlet property="selection4" destination="8gv-lb-FNL" id="ZPc-5a-kiM"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Ii-Bb-mxO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5333" y="112"/>
+        </scene>
+        <!--Score-->
+        <scene sceneID="Hhw-CO-IU6">
+            <objects>
+                <viewController title="Score" id="o6u-n5-1Op" customClass="ScoreViewController" customModule="QuizGames" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DFd-LX-yc4"/>
+                        <viewControllerLayoutGuide type="bottom" id="dF8-cc-TQf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="E7u-tS-Zc5">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dice_wallpaper" translatesAutoresizingMaskIntoConstraints="NO" id="f0J-At-LfP">
+                                <rect key="frame" x="0.0" y="12" width="600" height="588"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="dwy-5p-IyE">
+                                <rect key="frame" x="20" y="271" width="560" height="58"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7U0-JG-OPM">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xXK-8f-yB3">
+                                        <rect key="frame" x="0.0" y="29" width="560" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4K1-Si-tij">
+                                <rect key="frame" x="494" y="539" width="86" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <inset key="contentEdgeInsets" minX="5" minY="6" maxX="5" maxY="6"/>
+                                <state key="normal" title="Submit">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onSubmitBtnTap:" destination="o6u-n5-1Op" eventType="touchUpInside" id="ava-e6-gdM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JIM-eU-fDi">
+                                <rect key="frame" x="20" y="539" width="85" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <inset key="contentEdgeInsets" minX="5" minY="6" maxX="5" maxY="6"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onCancelBtnTap:" destination="o6u-n5-1Op" eventType="touchUpInside" id="gZs-ib-eAD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="dF8-cc-TQf" firstAttribute="top" secondItem="4K1-Si-tij" secondAttribute="bottom" constant="20" id="64z-Xm-P04"/>
+                            <constraint firstItem="f0J-At-LfP" firstAttribute="leading" secondItem="E7u-tS-Zc5" secondAttribute="leadingMargin" constant="-20" id="SDe-nk-xxw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dwy-5p-IyE" secondAttribute="trailing" id="Ufh-nX-K8C"/>
+                            <constraint firstItem="dwy-5p-IyE" firstAttribute="centerY" secondItem="E7u-tS-Zc5" secondAttribute="centerY" id="Vpa-mJ-ewb"/>
+                            <constraint firstItem="f0J-At-LfP" firstAttribute="top" secondItem="DFd-LX-yc4" secondAttribute="bottom" constant="-8" id="Ygd-u1-jJc"/>
+                            <constraint firstItem="dwy-5p-IyE" firstAttribute="leading" secondItem="E7u-tS-Zc5" secondAttribute="leadingMargin" id="c8W-SR-i5L"/>
+                            <constraint firstItem="f0J-At-LfP" firstAttribute="trailing" secondItem="E7u-tS-Zc5" secondAttribute="trailingMargin" constant="20" id="gRM-3h-kr2"/>
+                            <constraint firstItem="dF8-cc-TQf" firstAttribute="top" secondItem="f0J-At-LfP" secondAttribute="bottom" id="kRJ-Un-FAO"/>
+                            <constraint firstItem="dF8-cc-TQf" firstAttribute="top" secondItem="JIM-eU-fDi" secondAttribute="bottom" constant="20" id="n0g-H6-z5j"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4K1-Si-tij" secondAttribute="trailing" id="n61-c2-zgv"/>
+                            <constraint firstItem="JIM-eU-fDi" firstAttribute="leading" secondItem="E7u-tS-Zc5" secondAttribute="leadingMargin" id="yO5-g2-Mi9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ansQuestionsLbl" destination="xXK-8f-yB3" id="H4r-yh-Q7T"/>
+                        <outlet property="cancelBtn" destination="JIM-eU-fDi" id="57A-cg-5lw"/>
+                        <outlet property="scoreLbl" destination="7U0-JG-OPM" id="2yK-Ph-KO8"/>
+                        <outlet property="submitBtn" destination="4K1-Si-tij" id="qgh-w6-vVM"/>
+                        <segue destination="upW-AQ-e7k" kind="show" identifier="showMainView" id="Oat-kK-3Rk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L9f-kS-jxQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3015" y="1506"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="S2N-gV-PF6">

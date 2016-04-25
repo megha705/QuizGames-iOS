@@ -6,5 +6,13 @@
   Copyright © 2016 Sourcestream. All rights reserved.
 */
 
+// QuizPageViewController
 "timeLeft" = "Time left: %@";
 "questionPosition" = "%@ of %@";
+"score" = "Score: %@";
+
+//ScoreViewController
+"scoreResult" = "Your score is %@.";
+"answeredQuestions" = "You have answered %@ questions.";
+"cancel" = "Cancel";
+"enterNickname" = "Enter nickname:";

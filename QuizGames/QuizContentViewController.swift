@@ -21,7 +21,7 @@ class QuizContentViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         var buttons = [selection1, selection2, selection3, selection4]
-        quizChoices?.shuffle()
+        quizChoices = quizChoices?.shuffle()
         for i in 0 ..< buttons.count {
             buttons[i].setTitle(quizChoices![i].choice, forState: .Normal)
             buttons[i].tag = quizChoices![i].isRightChoice!
@@ -39,7 +39,9 @@ class QuizContentViewController: UIViewController {
     
     
     @IBAction func onSelectionButtonTap(sender: AnyObject) {
-        print(sender.tag)
+        if let quizPageVC = parentViewController?.parentViewController as? QuizPageViewController {
+            quizPageVC.onSelectionButtonTap(sender.tag)
+        }
     }
     
     /*

@@ -18,6 +18,7 @@
 		85790F1B1CCA8D9200C7022C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85790F1A1CCA8D9200C7022C /* Assets.xcassets */; };
 		85790F1E1CCA8D9200C7022C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85790F1C1CCA8D9200C7022C /* LaunchScreen.storyboard */; };
 		85790F291CCA8D9200C7022C /* QuizGamesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85790F281CCA8D9200C7022C /* QuizGamesTests.swift */; };
+		859A5BE31CCE4B3900C6AE8B /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859A5BE21CCE4B3900C6AE8B /* ScoreViewController.swift */; };
 		85FAAD041CCB70360091EC9C /* QuizGamesSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FAAD031CCB70360091EC9C /* QuizGamesSelectionViewController.swift */; };
 		85FAAD361CCB96BF0091EC9C /* QuizPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FAAD351CCB96BF0091EC9C /* QuizPageViewController.swift */; };
 		85FAAD381CCB96DB0091EC9C /* QuizContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FAAD371CCB96DB0091EC9C /* QuizContentViewController.swift */; };
@@ -52,6 +53,7 @@
 		85790F241CCA8D9200C7022C /* QuizGamesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuizGamesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		85790F281CCA8D9200C7022C /* QuizGamesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizGamesTests.swift; sourceTree = "<group>"; };
 		85790F2A1CCA8D9200C7022C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		859A5BE21CCE4B3900C6AE8B /* ScoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
 		85FAAD031CCB70360091EC9C /* QuizGamesSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizGamesSelectionViewController.swift; sourceTree = "<group>"; };
 		85FAAD351CCB96BF0091EC9C /* QuizPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizPageViewController.swift; sourceTree = "<group>"; };
 		85FAAD371CCB96DB0091EC9C /* QuizContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizContentViewController.swift; sourceTree = "<group>"; };
@@ -118,16 +120,12 @@
 		85790F121CCA8D9200C7022C /* QuizGames */ = {
 			isa = PBXGroup;
 			children = (
+				859A5BE51CCE628200C6AE8B /* Controller */,
+				859A5BE41CCE627800C6AE8B /* View */,
 				854A19641CCBDAB6004C5B9C /* Model */,
 				85790F131CCA8D9200C7022C /* AppDelegate.swift */,
-				85790F151CCA8D9200C7022C /* MainViewController.swift */,
-				85790F171CCA8D9200C7022C /* Main.storyboard */,
 				85790F1A1CCA8D9200C7022C /* Assets.xcassets */,
-				85790F1C1CCA8D9200C7022C /* LaunchScreen.storyboard */,
 				85790F1F1CCA8D9200C7022C /* Info.plist */,
-				85FAAD031CCB70360091EC9C /* QuizGamesSelectionViewController.swift */,
-				85FAAD351CCB96BF0091EC9C /* QuizPageViewController.swift */,
-				85FAAD371CCB96DB0091EC9C /* QuizContentViewController.swift */,
 				854A19621CCBD67D004C5B9C /* Util.swift */,
 				854A19691CCBE77A004C5B9C /* extensions.swift */,
 				8524F6C71CCD2DDF00CF664B /* Localizable.strings */,
@@ -142,6 +140,27 @@
 				85790F2A1CCA8D9200C7022C /* Info.plist */,
 			);
 			path = QuizGamesTests;
+			sourceTree = "<group>";
+		};
+		859A5BE41CCE627800C6AE8B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				85790F171CCA8D9200C7022C /* Main.storyboard */,
+				85790F1C1CCA8D9200C7022C /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		859A5BE51CCE628200C6AE8B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				85790F151CCA8D9200C7022C /* MainViewController.swift */,
+				85FAAD031CCB70360091EC9C /* QuizGamesSelectionViewController.swift */,
+				85FAAD351CCB96BF0091EC9C /* QuizPageViewController.swift */,
+				85FAAD371CCB96DB0091EC9C /* QuizContentViewController.swift */,
+				859A5BE21CCE4B3900C6AE8B /* ScoreViewController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 		CE5C7262C6DDA749CBBCC940 /* Frameworks */ = {
@@ -313,6 +332,7 @@
 				85790F141CCA8D9200C7022C /* AppDelegate.swift in Sources */,
 				854A196A1CCBE77A004C5B9C /* extensions.swift in Sources */,
 				85FAAD381CCB96DB0091EC9C /* QuizContentViewController.swift in Sources */,
+				859A5BE31CCE4B3900C6AE8B /* ScoreViewController.swift in Sources */,
 				85FAAD361CCB96BF0091EC9C /* QuizPageViewController.swift in Sources */,
 				854A19681CCBDC11004C5B9C /* QuizChoice.swift in Sources */,
 			);

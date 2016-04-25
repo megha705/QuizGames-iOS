@@ -10,11 +10,11 @@ import UIKit
 import Alamofire
 
 class QuizPageViewController: UIViewController, UIPageViewControllerDataSource {
-    let MAX_TIME = 5
+    let MAX_TIME = 20
     let MAX_POINTS = 100
     var score = 0
     var correctAnswers = 0
-    var count = 0
+    var elapsedTime = 0
     var timer = NSTimer()
     var quizType: String?
     var quizList: [Quiz] = []
@@ -104,19 +104,21 @@ class QuizPageViewController: UIViewController, UIPageViewControllerDataSource {
     }
     
     func counter() {
-        count += 1
-        if (MAX_TIME-count == 0) {
-            count = 0
+        elapsedTime += 1
+        if (MAX_TIME-elapsedTime == 0) {
+            elapsedTime = 0
             let vc = pageViewController.viewControllers![0] as! QuizContentViewController
             let pageIndex = vc.pageIndex
-            if pageIndex < quizList.count - 1{
-                self.pageViewController.setViewControllers([self.getViewControllerAtIndex(pageIndex+1)] as [UIViewController], direction: UIPageViewControllerNavigationDirection.Forward, animated: false, completion: nil)
+            if pageIndex == quizList.count - 1 {
+                performSegueWithIdentifier("showScore", sender: nil)
+            } else {
+                self.pageViewController.setViewControllers([self.getViewControllerAtIndex(pageIndex+1)] as [UIViewController], direction: UIPageViewControllerNavigationDirection.Forward, animated: true, completion: nil)
                 // pageIndex starts from zero that's why we add +2
                 let questionPosition = String(format: NSLocalizedString("questionPosition", comment: ""), String(pageIndex+2), String(20))
                 pageLabel.text = questionPosition
             }
         }
-        let timeLeft = String(format: NSLocalizedString("timeLeft", comment: ""), String(MAX_TIME-count))
+        let timeLeft = String(format: NSLocalizedString("timeLeft", comment: ""), String(MAX_TIME-elapsedTime))
         timeleftLabel.text = timeLeft
     }
     
@@ -162,6 +164,43 @@ class QuizPageViewController: UIViewController, UIPageViewControllerDataSource {
         pageContentViewController.quizImg = quiz.quizImage
         pageContentViewController.pageIndex = index
         return pageContentViewController
+    }
+    
+    // This is called from the child view when the user taps on one of the buttons
+    func onSelectionButtonTap(correctAnswer: Int) {
+        if correctAnswer == 1 {
+            score += (MAX_POINTS / MAX_TIME) * (MAX_TIME - elapsedTime);
+            correctAnswers += 1;
+            let scoreText = String(format: NSLocalizedString("score", comment: ""), String(score))
+            scoreLabel.text = scoreText
+        }
+        let vc = pageViewController.viewControllers![0] as! QuizContentViewController
+        let pageIndex = vc.pageIndex
+        if pageIndex == quizList.count - 1 {
+            performSegueWithIdentifier("showScore", sender: nil)
+        } else {
+            elapsedTime = 0
+            self.pageViewController.setViewControllers([self.getViewControllerAtIndex(pageIndex+1)] as [UIViewController], direction: UIPageViewControllerNavigationDirection.Forward, animated: true, completion: nil)
+            // pageIndex starts from zero that's why we add +2
+            let questionPosition = String(format: NSLocalizedString("questionPosition", comment: ""), String(pageIndex+2), String(20))
+            pageLabel.text = questionPosition
+            
+            let timeLeft = String(format: NSLocalizedString("timeLeft", comment: ""), String(MAX_TIME-elapsedTime))
+            timeleftLabel.text = timeLeft
+        }
+        
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        // stop our timer from firing
+        timer.invalidate()
+        let identifier = segue.identifier
+        let destVc = (segue.destinationViewController as! ScoreViewController)
+        if identifier == "showScore" {
+            destVc.score = score
+            destVc.correctAnswers = correctAnswers
+            destVc.quizType = quizType
+        }
     }
     
 }
