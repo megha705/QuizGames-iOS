@@ -88,9 +88,26 @@ class TopScoresChildViewController: UIViewController, UITableViewDelegate, UITab
         let result = resultsList[indexPath.row]
         cell.name.text = result.name
         cell.score.text = String(result.score!)
-        cell.days.text = result.date
+        
+        let date = NSDate(timeIntervalSince1970: NSTimeInterval(parseDateTime(result.date!)))
+        cell.days.text = date.relativeTime
         
         return cell
+    }
+    
+    func parseDateTime(dtString: String) -> CLong {
+        var dateString = dtString
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss.SSSZ"
+        if dateString.containsString("T") {
+            dateString = dateString.stringByReplacingOccurrencesOfString("T", withString: " ")
+        }
+        if dateString.containsString("Z") {
+            dateString = dateString.stringByReplacingOccurrencesOfString("Z", withString: "+0000")
+        }
+        
+        let date = dateFormatter.dateFromString(dateString)?.timeIntervalSince1970
+        return CLong(date!)
     }
     
     

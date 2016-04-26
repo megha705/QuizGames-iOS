@@ -19,3 +19,20 @@
 
 // Dialog
 "connectionMsg" = "Can\'t connect to the server. Please try again.";
+
+/* Relative time */
+"year" = "%@ year ago";
+"years" = "%@ years ago";
+"month" = "%@ month ago";
+"months" = "%@ months ago";
+"week" = "%@ week ago";
+"weeks" = "%@ weeks ago";
+"yesterday" = "Yesterday";
+"days" = "%@ days ago";
+"hour" = "%@ hour ago";
+"hours" = "%@ hours ago";
+"minute" = "%@ minute ago";
+"minutes" = "%@ minutes ago";
+"second" = "%@ second ago";
+"seconds" = "%@ seconds ago";
+"justNow" = "Just now";
