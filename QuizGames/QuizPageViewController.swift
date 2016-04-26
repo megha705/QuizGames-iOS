@@ -23,6 +23,7 @@ class QuizPageViewController: UIViewController, UIPageViewControllerDataSource {
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var pageLabel: UILabel!
     @IBOutlet weak var timeleftLabel: UILabel!
+    @IBOutlet weak var mIndicator: UIActivityIndicatorView!
     
     
     override func viewDidLoad() {
@@ -37,6 +38,13 @@ class QuizPageViewController: UIViewController, UIPageViewControllerDataSource {
         view.bringSubviewToFront(scoreLabel)
         view.bringSubviewToFront(pageLabel)
         view.bringSubviewToFront(timeleftLabel)
+        
+        // 2x scale on the indicator
+        mIndicator.transform = CGAffineTransformMakeScale(2, 2)
+        mIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray
+        mIndicator.startAnimating()
+        mIndicator.backgroundColor = UIColor.clearColor()
+        view.bringSubviewToFront(mIndicator)
         
         Alamofire.request(.GET, "\(Util.quizGamesAPI)/quiz/\(quizType!)", parameters: nil, headers: nil, encoding: .JSON)
             .responseJSON { response in
@@ -84,6 +92,9 @@ class QuizPageViewController: UIViewController, UIPageViewControllerDataSource {
                     
                     // Disable user scrolling
                     //  self.pageViewController.dataSource = self
+                    
+                    self.mIndicator.stopAnimating()
+                    self.mIndicator.hidesWhenStopped = true
                     
                     self.pageViewController.setViewControllers([self.getViewControllerAtIndex(0)] as [UIViewController], direction: UIPageViewControllerNavigationDirection.Forward, animated: false, completion: nil)
                     self.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(QuizPageViewController.counter), userInfo: nil, repeats: true)

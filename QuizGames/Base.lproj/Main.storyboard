@@ -251,10 +251,15 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="gXn-R0-1Fd">
+                                <rect key="frame" x="290" y="290" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="vjh-uD-IfG" firstAttribute="centerX" secondItem="me9-mS-wqT" secondAttribute="centerX" id="05k-yV-5UD"/>
+                            <constraint firstItem="gXn-R0-1Fd" firstAttribute="centerY" secondItem="me9-mS-wqT" secondAttribute="centerY" id="1kn-Qn-RAm"/>
+                            <constraint firstItem="gXn-R0-1Fd" firstAttribute="centerX" secondItem="me9-mS-wqT" secondAttribute="centerX" id="CxB-gD-t2b"/>
                             <constraint firstItem="gwp-Ao-Yh6" firstAttribute="top" secondItem="SDh-K5-4WO" secondAttribute="bottom" constant="10" id="IIz-eo-deA"/>
                             <constraint firstItem="Bt6-sl-IED" firstAttribute="top" secondItem="SDh-K5-4WO" secondAttribute="bottom" constant="10" id="dNy-dj-SX4"/>
                             <constraint firstItem="Bt6-sl-IED" firstAttribute="leading" secondItem="me9-mS-wqT" secondAttribute="leadingMargin" id="i9E-tL-deh"/>
@@ -263,6 +268,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="mIndicator" destination="gXn-R0-1Fd" id="fYU-SB-HX0"/>
                         <outlet property="pageLabel" destination="vjh-uD-IfG" id="gGM-Bx-lHh"/>
                         <outlet property="scoreLabel" destination="Bt6-sl-IED" id="RkU-85-H5Z"/>
                         <outlet property="timeleftLabel" destination="gwp-Ao-Yh6" id="wiP-og-ak7"/>
