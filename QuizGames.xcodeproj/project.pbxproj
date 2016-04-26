@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8524F6C51CCD2DDF00CF664B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8524F6C71CCD2DDF00CF664B /* Localizable.strings */; };
+		8532E26F1CCF7F7300BB0EE9 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8532E26E1CCF7F7300BB0EE9 /* AboutViewController.swift */; };
 		854A19631CCBD67D004C5B9C /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854A19621CCBD67D004C5B9C /* Util.swift */; };
 		854A19661CCBDAE7004C5B9C /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854A19651CCBDAE7004C5B9C /* Quiz.swift */; };
 		854A19681CCBDC11004C5B9C /* QuizChoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854A19671CCBDC11004C5B9C /* QuizChoice.swift */; };
@@ -39,6 +40,8 @@
 		5F003A15E1EEE1B3A806CFE4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		800B31AC317C137511F15757 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		8524F6C61CCD2DDF00CF664B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		8532E26E1CCF7F7300BB0EE9 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		8532E2731CCF84A400BB0EE9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		854A19621CCBD67D004C5B9C /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		854A19651CCBDAE7004C5B9C /* Quiz.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
 		854A19671CCBDC11004C5B9C /* QuizChoice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizChoice.swift; sourceTree = "<group>"; };
@@ -159,6 +162,7 @@
 				85FAAD351CCB96BF0091EC9C /* QuizPageViewController.swift */,
 				85FAAD371CCB96DB0091EC9C /* QuizContentViewController.swift */,
 				859A5BE21CCE4B3900C6AE8B /* ScoreViewController.swift */,
+				8532E26E1CCF7F7300BB0EE9 /* AboutViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -327,6 +331,7 @@
 			files = (
 				85FAAD041CCB70360091EC9C /* QuizGamesSelectionViewController.swift in Sources */,
 				854A19631CCBD67D004C5B9C /* Util.swift in Sources */,
+				8532E26F1CCF7F7300BB0EE9 /* AboutViewController.swift in Sources */,
 				854A19661CCBDAE7004C5B9C /* Quiz.swift in Sources */,
 				85790F161CCA8D9200C7022C /* MainViewController.swift in Sources */,
 				85790F141CCA8D9200C7022C /* AppDelegate.swift in Sources */,
@@ -369,6 +374,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				85790F181CCA8D9200C7022C /* Base */,
+				8532E2731CCF84A400BB0EE9 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

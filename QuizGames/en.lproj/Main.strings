@@ -1,0 +1,75 @@
+
+/* Class = "UIButton"; normalTitle = "Submit"; ObjectID = "4K1-Si-tij"; */
+"4K1-Si-tij.normalTitle" = "Submit";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "7U0-JG-OPM"; */
+"7U0-JG-OPM.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "8gv-lb-FNL"; */
+"8gv-lb-FNL.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "8r5-u2-nSo"; */
+"8r5-u2-nSo.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Score: 0"; ObjectID = "Bt6-sl-IED"; */
+"Bt6-sl-IED.text" = "Score: 0";
+
+/* Class = "UILabel"; text = "Quiz Games 1.0.0"; ObjectID = "CVY-Lv-xjg"; */
+"CVY-Lv-xjg.text" = "Quiz Games 1.0.0";
+
+/* Class = "UIButton"; normalTitle = "Play"; ObjectID = "FQb-nx-k5l"; */
+"FQb-nx-k5l.normalTitle" = "Play";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "JIM-eU-fDi"; */
+"JIM-eU-fDi.normalTitle" = "Cancel";
+
+/* Class = "UINavigationItem"; title = "QuizGames"; ObjectID = "STR-sz-b4a"; */
+"STR-sz-b4a.title" = "QuizGames";
+
+/* Class = "UIButton"; normalTitle = "About"; ObjectID = "WhT-qx-Cy0"; */
+"WhT-qx-Cy0.normalTitle" = "About";
+
+/* Class = "UIButton"; normalTitle = "Top Scores"; ObjectID = "a1P-K2-dmu"; */
+"a1P-K2-dmu.normalTitle" = "Top Scores";
+
+/* Class = "UILabel"; text = "Developed by: Radoslav Yordanodv"; ObjectID = "aQf-6T-a7a"; */
+"aQf-6T-a7a.text" = "Developed by: Radoslav Yordanov";
+
+/* Class = "UILabel"; text = "Time left: 20"; ObjectID = "gwp-Ao-Yh6"; */
+"gwp-Ao-Yh6.text" = "Time left: 20";
+
+/* Class = "UIViewController"; title = "Quiz Games"; ObjectID = "hOG-BJ-25N"; */
+"hOG-BJ-25N.title" = "Quiz Games";
+
+/* Class = "UIButton"; normalTitle = "Cities Quiz"; ObjectID = "hV4-SD-36F"; */
+"hV4-SD-36F.normalTitle" = "Cities Quiz";
+
+/* Class = "UILabel"; text = "Contact: radikan94@gmail.com"; ObjectID = "jDI-Hb-WX6"; */
+"jDI-Hb-WX6.text" = "Contact: radikan94@gmail.com";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "mIg-uf-4SX"; */
+"mIg-uf-4SX.normalTitle" = "Button";
+
+/* Class = "UIViewController"; title = "Score"; ObjectID = "o6u-n5-1Op"; */
+"o6u-n5-1Op.title" = "Score";
+
+/* Class = "UIButton"; normalTitle = "Logos Quiz"; ObjectID = "p2z-e0-mGt"; */
+"p2z-e0-mGt.normalTitle" = "Logos Quiz";
+
+/* Class = "UIViewController"; title = "About"; ObjectID = "sTu-k6-m3O"; */
+"sTu-k6-m3O.title" = "About";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "u2X-2f-L1g"; */
+"u2X-2f-L1g.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "1 of 20"; ObjectID = "vjh-uD-IfG"; */
+"vjh-uD-IfG.text" = "1 of 20";
+
+/* Class = "UIButton"; normalTitle = "Cars Quiz"; ObjectID = "wyB-0w-URm"; */
+"wyB-0w-URm.normalTitle" = "Cars Quiz";
+
+/* Class = "UILabel"; text = "All rights reserved 2016."; ObjectID = "x8f-Hg-5lp"; */
+"x8f-Hg-5lp.text" = "All rights reserved 2016.";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "xXK-8f-yB3"; */
+"xXK-8f-yB3.text" = "Label";
