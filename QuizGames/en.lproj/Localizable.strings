@@ -16,3 +16,6 @@
 "answeredQuestions" = "You have answered %@ questions.";
 "cancel" = "Cancel";
 "enterNickname" = "Enter nickname:";
+
+// Dialog
+"connectionMsg" = "Can\'t connect to the server. Please try again.";

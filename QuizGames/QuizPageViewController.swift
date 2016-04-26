@@ -38,6 +38,9 @@ class QuizPageViewController: UIViewController, UIPageViewControllerDataSource {
         view.bringSubviewToFront(scoreLabel)
         view.bringSubviewToFront(pageLabel)
         view.bringSubviewToFront(timeleftLabel)
+        scoreLabel.hidden = true
+        pageLabel.hidden = true
+        timeleftLabel.hidden = true
         
         // 2x scale on the indicator
         mIndicator.transform = CGAffineTransformMakeScale(2, 2)
@@ -93,18 +96,26 @@ class QuizPageViewController: UIViewController, UIPageViewControllerDataSource {
                     // Disable user scrolling
                     //  self.pageViewController.dataSource = self
                     
-                    self.mIndicator.stopAnimating()
-                    self.mIndicator.hidesWhenStopped = true
+                    // Show our labels
+                    self.scoreLabel.hidden = false
+                    self.pageLabel.hidden = false
+                    self.timeleftLabel.hidden = false
                     
                     self.pageViewController.setViewControllers([self.getViewControllerAtIndex(0)] as [UIViewController], direction: UIPageViewControllerNavigationDirection.Forward, animated: false, completion: nil)
                     self.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(QuizPageViewController.counter), userInfo: nil, repeats: true)
                     
                 } else {
-                    // register failed
-                    
+                    // failed to connect
+                    let connectionMsg = NSLocalizedString("connectionMsg", comment: "")
+                    let alert =  UIAlertController(title: nil, message: connectionMsg, preferredStyle: .Alert)
+                    let okAction: UIAlertAction = UIAlertAction(title: "OK", style: .Default) { action -> Void in
+                    }
+                    alert.addAction(okAction)
+                    self.presentViewController(alert, animated: true, completion: nil)
                 }
+                self.mIndicator.stopAnimating()
+                self.mIndicator.hidesWhenStopped = true
         }
-        
         
         
     }

@@ -46,14 +46,18 @@ class TopScoresChildViewController: UIViewController, UITableViewDelegate, UITab
                         resultModel.date = result["date"] as? String
                         self.resultsList.append(resultModel)
                     }
-                    self.mIndicator.stopAnimating()
-                    self.mIndicator.hidesWhenStopped = true
                     self.mTableView.reloadData()
-                    
                 } else {
-                    // register failed
-                    
+                    // failed to connect
+                    let connectionMsg = NSLocalizedString("connectionMsg", comment: "")
+                    let alert =  UIAlertController(title: nil, message: connectionMsg, preferredStyle: .Alert)
+                    let okAction: UIAlertAction = UIAlertAction(title: "OK", style: .Default) { action -> Void in
+                    }
+                    alert.addAction(okAction)
+                    self.presentViewController(alert, animated: true, completion: nil)
                 }
+                self.mIndicator.stopAnimating()
+                self.mIndicator.hidesWhenStopped = true
         }
         
         
