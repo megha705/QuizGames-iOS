@@ -13,6 +13,7 @@ class QuizGamesSelectionViewController: UIViewController {
     @IBOutlet weak var carsQuizButton: UIButton!
     @IBOutlet weak var logosQuizButton: UIButton!
     @IBOutlet weak var citiesQuizButton: UIButton!
+    var timedQuiz: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,6 +53,7 @@ class QuizGamesSelectionViewController: UIViewController {
         let identifier = segue.identifier
         let destVc = (segue.destinationViewController as! QuizPageViewController)
         destVc.quizType = identifier
+        destVc.timedQuiz = timedQuiz
     }
     
 }

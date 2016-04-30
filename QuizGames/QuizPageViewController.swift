@@ -10,6 +10,7 @@ import UIKit
 import Alamofire
 
 class QuizPageViewController: UIViewController, UIPageViewControllerDataSource {
+    var timedQuiz: Int?
     let MAX_TIME = 20
     let MAX_POINTS = 100
     let MAX_QUESTIONS = 20
@@ -102,8 +103,14 @@ class QuizPageViewController: UIViewController, UIPageViewControllerDataSource {
                     self.pageLabel.hidden = false
                     self.timeleftLabel.hidden = false
                     
+                    if self.timedQuiz == 0 {
+                        self.timeleftLabel.hidden = true
+                    }
+                    
                     self.pageViewController.setViewControllers([self.getViewControllerAtIndex(0)] as [UIViewController], direction: UIPageViewControllerNavigationDirection.Forward, animated: false, completion: nil)
-                    self.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(QuizPageViewController.counter), userInfo: nil, repeats: true)
+                    if self.timedQuiz == 1 {
+                        self.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(QuizPageViewController.counter), userInfo: nil, repeats: true)
+                    }
                     
                 } else {
                     // failed to connect
