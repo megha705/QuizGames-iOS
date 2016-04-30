@@ -17,7 +17,6 @@ class ScoreViewController: UIViewController {
     @IBOutlet weak var submitBtn: UIButton!
     @IBOutlet weak var scoreLbl: UILabel!
     @IBOutlet weak var ansQuestionsLbl: UILabel!
-    var nicknameDialog = UIAlertController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,48 +34,6 @@ class ScoreViewController: UIViewController {
         
         let answeredQuestions = String(format: NSLocalizedString("answeredQuestions", comment: ""), String(correctAnswers!))
         ansQuestionsLbl.text = answeredQuestions
-        
-        // Create nickname  dialog
-        let enterNickname = NSLocalizedString("enterNickname", comment: "")
-        nicknameDialog = UIAlertController(title: enterNickname, message: nil, preferredStyle: UIAlertControllerStyle.Alert)
-        var nicknameTextField = UITextField()
-        
-        let actionOkay = UIAlertAction(title: "Okay", style: UIAlertActionStyle.Default, handler: { (action) -> Void in
-            Alamofire.request(.POST, "\(Util.quizGamesAPI)/results/\(self.quizType!)", parameters: ["name": nicknameTextField.text!, "score": self.score!], headers: nil, encoding: .JSON)
-                .responseJSON { response in
-                    // print(response.request)  // original URL request
-                    // print(response.response) // URL response
-                    // print(response.data)     // server data
-                    // print(response.result)   // result of response serialization
-                    
-                    if let _ = response.result.value {
-                        // success
-                        self.performSegueWithIdentifier("showMainView", sender: nil)
-                    } else {
-                        // failed to connect
-                        let connectionMsg = NSLocalizedString("connectionMsg", comment: "")
-                        let alert =  UIAlertController(title: nil, message: connectionMsg, preferredStyle: .Alert)
-                        let okAction: UIAlertAction = UIAlertAction(title: "OK", style: .Default) { action -> Void in
-                        }
-                        alert.addAction(okAction)
-                        self.presentViewController(alert, animated: true, completion: nil)
-                    }
-            }
-        })
-        nicknameDialog.addAction(actionOkay)
-        // disable the ok button
-        (nicknameDialog.actions[0] as UIAlertAction).enabled = false
-        
-        let cancel = NSLocalizedString("cancel", comment: "")
-        let actionCancel = UIAlertAction(title: cancel, style: .Cancel, handler: {action in
-            
-        })
-        nicknameDialog.addAction(actionCancel)
-        // add textField
-        nicknameDialog.addTextFieldWithConfigurationHandler({(textField: UITextField!) in
-            textField.addTarget(self, action: #selector(ScoreViewController.textChanged(_:)), forControlEvents: .EditingChanged)
-            nicknameTextField = textField
-        })
         
     }
     
@@ -101,24 +58,31 @@ class ScoreViewController: UIViewController {
     @IBAction func onCancelBtnTap(sender: AnyObject) {
         performSegueWithIdentifier("showMainView", sender: sender)
     }
-    @IBAction func onSubmitBtnTap(sender: AnyObject) {
-        // show the nickname dialog
-        presentViewController(nicknameDialog, animated: true, completion: nil)
-    }
     
-    // Fired when text changes in the description textField
-    func textChanged(sender:AnyObject) {
-        let tf = sender as! UITextField
-        var resp : UIResponder = tf
-        
-        while !(resp is UIAlertController) {
-            resp = resp.nextResponder()!
+    @IBAction func onSubmitBtnTap(sender: AnyObject) {
+        Alamofire.request(.POST, "\(Util.quizGamesAPI)/results/\(self.quizType!)", parameters: ["user_id": Util.userId, "score": self.score!], headers: nil, encoding: .JSON)
+            .responseJSON { response in
+                // print(response.request)  // original URL request
+                // print(response.response) // URL response
+                // print(response.data)     // server data
+                // print(response.result)   // result of response serialization
+                
+                if let _ = response.result.value {
+                    // success
+                    self.performSegueWithIdentifier("showMainView", sender: nil)
+                } else {
+                    // failed to connect
+                    let connectionMsg = NSLocalizedString("connectionMsg", comment: "")
+                    let alert =  UIAlertController(title: nil, message: connectionMsg, preferredStyle: .Alert)
+                    let okAction: UIAlertAction = UIAlertAction(title: "OK", style: .Default) { action -> Void in
+                    }
+                    alert.addAction(okAction)
+                    self.presentViewController(alert, animated: true, completion: nil)
+                }
         }
         
-        let alert = resp as! UIAlertController
-        
-        let tempString = tf.text!.stringByReplacingOccurrencesOfString(" ", withString: "")
-        (alert.actions[0] as UIAlertAction).enabled = (tempString != "")
     }
+    
+    
     
 }

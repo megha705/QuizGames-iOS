@@ -1,10 +1,10 @@
-/* 
-  Localizable.strings
-  QuizGames
-
-  Created by Radoslav on 4/24/16.
-  Copyright © 2016 Sourcestream. All rights reserved.
-*/
+/*
+ Localizable.strings
+ QuizGames
+ 
+ Created by Radoslav on 4/24/16.
+ Copyright © 2016 Sourcestream. All rights reserved.
+ */
 
 // QuizPageViewController
 "timeLeft" = "Time left: %@";
@@ -36,3 +36,6 @@
 "second" = "%@ second ago";
 "seconds" = "%@ seconds ago";
 "justNow" = "Just now";
+
+// LoginViewController
+"invalidCredentials" = "Invalid username or password. Please try again.";

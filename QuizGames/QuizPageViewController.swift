@@ -139,7 +139,7 @@ class QuizPageViewController: UIViewController, UIPageViewControllerDataSource {
             elapsedTime = 0
             let vc = pageViewController.viewControllers![0] as! QuizContentViewController
             let pageIndex = vc.pageIndex
-            if pageIndex == MAX_QUESTIONS {
+            if pageIndex == MAX_QUESTIONS - 1 {
                 performSegueWithIdentifier("showScore", sender: nil)
             } else {
                 self.pageViewController.setViewControllers([self.getViewControllerAtIndex(pageIndex+1)] as [UIViewController], direction: UIPageViewControllerNavigationDirection.Forward, animated: true, completion: nil)
@@ -224,6 +224,7 @@ class QuizPageViewController: UIViewController, UIPageViewControllerDataSource {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         // stop our timer from firing
         timer.invalidate()
+        timer = NSTimer()
         let identifier = segue.identifier
         let destVc = (segue.destinationViewController as! ScoreViewController)
         if identifier == "showScore" {

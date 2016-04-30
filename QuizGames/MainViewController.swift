@@ -34,6 +34,13 @@ class MainViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    
+    @IBAction func onLogoutTap(sender: AnyObject) {
+        let preferences = NSUserDefaults.standardUserDefaults()
+        preferences.setInteger(0, forKey: Util.USER_ID_PREF)
+        preferences.setInteger(0, forKey: Util.USER_ROLE_ID)
+        self.performSegueWithIdentifier("showLoginView", sender: sender)
+    }
 
 }
 
