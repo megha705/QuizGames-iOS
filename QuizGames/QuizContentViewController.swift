@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class QuizContentViewController: UIViewController {
     var pageIndex: Int = 0
@@ -29,7 +30,7 @@ class QuizContentViewController: UIViewController {
             buttons[i].layer.borderWidth = 1
             buttons[i].layer.borderColor = UIColor.clearColor().CGColor
         }
-        questionImg.image = UIImage(named:quizImg!)
+        questionImg.kf_setImageWithURL(NSURL(string: quizImg!)!)
     }
     
     override func didReceiveMemoryWarning() {

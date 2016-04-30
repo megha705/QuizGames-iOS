@@ -9,5 +9,5 @@
 import UIKit
 
 class Util {
-    static let quizGamesAPI = "http://quizgames-ryordanov.rhcloud.com/"
+    static let quizGamesAPI = "http://46.40.127.6:3000"
 }
