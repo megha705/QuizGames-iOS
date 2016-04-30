@@ -12,6 +12,7 @@ import Alamofire
 class QuizPageViewController: UIViewController, UIPageViewControllerDataSource {
     let MAX_TIME = 20
     let MAX_POINTS = 100
+    let MAX_QUESTIONS = 20
     var score = 0
     var correctAnswers = 0
     var elapsedTime = 0
@@ -131,7 +132,7 @@ class QuizPageViewController: UIViewController, UIPageViewControllerDataSource {
             elapsedTime = 0
             let vc = pageViewController.viewControllers![0] as! QuizContentViewController
             let pageIndex = vc.pageIndex
-            if pageIndex == quizList.count - 1 {
+            if pageIndex == MAX_QUESTIONS {
                 performSegueWithIdentifier("showScore", sender: nil)
             } else {
                 self.pageViewController.setViewControllers([self.getViewControllerAtIndex(pageIndex+1)] as [UIViewController], direction: UIPageViewControllerNavigationDirection.Forward, animated: true, completion: nil)
@@ -172,7 +173,7 @@ class QuizPageViewController: UIViewController, UIPageViewControllerDataSource {
             return nil;
         }
         index += 1;
-        if (index == quizList.count) {
+        if (index == MAX_QUESTIONS) {
             return nil;
         }
         return getViewControllerAtIndex(index)
@@ -198,7 +199,7 @@ class QuizPageViewController: UIViewController, UIPageViewControllerDataSource {
         }
         let vc = pageViewController.viewControllers![0] as! QuizContentViewController
         let pageIndex = vc.pageIndex
-        if pageIndex == quizList.count - 1 {
+        if pageIndex == MAX_QUESTIONS - 1 {
             performSegueWithIdentifier("showScore", sender: nil)
         } else {
             elapsedTime = 0
@@ -223,6 +224,30 @@ class QuizPageViewController: UIViewController, UIPageViewControllerDataSource {
             destVc.correctAnswers = correctAnswers
             destVc.quizType = quizType
         }
+    }
+    
+    func onSingleAnswerClick(correctAnswer: String, userInput: String) {
+        if correctAnswer.lowercaseString == userInput.lowercaseString {
+            score += 150;
+            correctAnswers += 1;
+            let scoreText = String(format: NSLocalizedString("score", comment: ""), String(score))
+            scoreLabel.text = scoreText
+        }
+        let vc = pageViewController.viewControllers![0] as! QuizContentViewController
+        let pageIndex = vc.pageIndex
+        if pageIndex == MAX_QUESTIONS - 1 {
+            performSegueWithIdentifier("showScore", sender: nil)
+        } else {
+            elapsedTime = 0
+            self.pageViewController.setViewControllers([self.getViewControllerAtIndex(pageIndex+1)] as [UIViewController], direction: UIPageViewControllerNavigationDirection.Forward, animated: true, completion: nil)
+            // pageIndex starts from zero that's why we add +2
+            let questionPosition = String(format: NSLocalizedString("questionPosition", comment: ""), String(pageIndex+2), String(20))
+            pageLabel.text = questionPosition
+            
+            let timeLeft = String(format: NSLocalizedString("timeLeft", comment: ""), String(MAX_TIME-elapsedTime))
+            timeleftLabel.text = timeLeft
+        }
+        
     }
     
 }

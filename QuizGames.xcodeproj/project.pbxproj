@@ -45,7 +45,6 @@
 		800B31AC317C137511F15757 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		8524F6C61CCD2DDF00CF664B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8532E26E1CCF7F7300BB0EE9 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
-		8532E2731CCF84A400BB0EE9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		854A19621CCBD67D004C5B9C /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		854A19651CCBDAE7004C5B9C /* Quiz.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
 		854A19671CCBDC11004C5B9C /* QuizChoice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizChoice.swift; sourceTree = "<group>"; };
@@ -390,7 +389,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				85790F181CCA8D9200C7022C /* Base */,
-				8532E2731CCF84A400BB0EE9 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
