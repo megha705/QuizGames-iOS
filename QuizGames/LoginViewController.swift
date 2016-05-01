@@ -9,7 +9,7 @@
 import UIKit
 import Alamofire
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var username: UITextField!
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var rememberMe: UISwitch!
@@ -26,6 +26,11 @@ class LoginViewController: UIViewController {
         register.layer.cornerRadius = 5
         register.layer.borderWidth = 1
         register.layer.borderColor = UIColor.whiteColor().CGColor
+        
+        username.delegate = self
+        username.tag = 1
+        password.delegate = self
+        password.tag = 2
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -92,6 +97,16 @@ class LoginViewController: UIViewController {
         }
         
         
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        if textField.tag == 1 {
+            textField.resignFirstResponder()
+            password.becomeFirstResponder()
+        } else if textField.tag == 2 {
+            onLoginTap(textField)
+        }
+        return true
     }
     
 }

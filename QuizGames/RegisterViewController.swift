@@ -9,7 +9,7 @@
 import UIKit
 import Alamofire
 
-class RegisterViewController: UIViewController {
+class RegisterViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var username: UITextField!
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var passwordConfirm: UITextField!
@@ -21,6 +21,13 @@ class RegisterViewController: UIViewController {
         submit.layer.cornerRadius = 5
         submit.layer.borderWidth = 1
         submit.layer.borderColor = UIColor.whiteColor().CGColor
+        
+        username.delegate = self
+        username.tag = 1
+        password.delegate = self
+        password.tag = 2
+        passwordConfirm.delegate = self
+        passwordConfirm.tag = 3
     }
     
     override func didReceiveMemoryWarning() {
@@ -90,5 +97,17 @@ class RegisterViewController: UIViewController {
         
     }
     
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        if textField.tag == 1 {
+            textField.resignFirstResponder()
+            password.becomeFirstResponder()
+        } else if textField.tag == 2 {
+            textField.resignFirstResponder()
+            passwordConfirm.becomeFirstResponder()
+        } else if textField.tag == 3 {
+            onSubmitTap(textField)
+        }
+        return true
+    }
     
 }
