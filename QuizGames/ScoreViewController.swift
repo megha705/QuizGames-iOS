@@ -42,19 +42,6 @@ class ScoreViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
-    
-    
     @IBAction func onCancelBtnTap(sender: AnyObject) {
         performSegueWithIdentifier("showMainView", sender: sender)
     }
@@ -74,7 +61,7 @@ class ScoreViewController: UIViewController {
                     // failed to connect
                     let connectionMsg = NSLocalizedString("connectionMsg", comment: "")
                     let alert =  UIAlertController(title: nil, message: connectionMsg, preferredStyle: .Alert)
-                    let okAction: UIAlertAction = UIAlertAction(title: "OK", style: .Default) { action -> Void in
+                    let okAction: UIAlertAction = UIAlertAction(title: "Okay", style: .Default) { action -> Void in
                     }
                     alert.addAction(okAction)
                     self.presentViewController(alert, animated: true, completion: nil)

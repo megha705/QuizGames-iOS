@@ -39,3 +39,11 @@
 
 // LoginViewController
 "invalidCredentials" = "Invalid username or password. Please try again.";
+
+// RegisterViewController
+"nicknameEmpty" = "Nickname can\'t be empty. Please try again.";
+"passwordEmpty" = "Password can\'t be empty. Please try again.";
+"passwordDifferent" = "Password is different. Please try again.";
+"usernameExists" = "Username exists. Please try again.";
+
+

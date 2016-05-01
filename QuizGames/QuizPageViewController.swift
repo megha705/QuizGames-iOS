@@ -116,7 +116,7 @@ class QuizPageViewController: UIViewController, UIPageViewControllerDataSource {
                     // failed to connect
                     let connectionMsg = NSLocalizedString("connectionMsg", comment: "")
                     let alert =  UIAlertController(title: nil, message: connectionMsg, preferredStyle: .Alert)
-                    let okAction: UIAlertAction = UIAlertAction(title: "OK", style: .Default) { action -> Void in
+                    let okAction: UIAlertAction = UIAlertAction(title: "Okay", style: .Default) { action -> Void in
                     }
                     alert.addAction(okAction)
                     self.presentViewController(alert, animated: true, completion: nil)
@@ -151,17 +151,6 @@ class QuizPageViewController: UIViewController, UIPageViewControllerDataSource {
         let timeLeft = String(format: NSLocalizedString("timeLeft", comment: ""), String(MAX_TIME-elapsedTime))
         timeleftLabel.text = timeLeft
     }
-    
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController?  {
         let pageContent: QuizContentViewController = viewController as! QuizContentViewController

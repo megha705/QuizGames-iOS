@@ -62,9 +62,9 @@ class LoginViewController: UIViewController {
                     // print("JSON: \(results)")
                     if results["status"] as! String == "failure" {
                         // invalid credentials
-                        let connectionMsg = NSLocalizedString("invalidCredentials", comment: "")
-                        let alert =  UIAlertController(title: nil, message: connectionMsg, preferredStyle: .Alert)
-                        let okAction: UIAlertAction = UIAlertAction(title: "OK", style: .Default) { action -> Void in
+                        let invalidCredentials = NSLocalizedString("invalidCredentials", comment: "")
+                        let alert =  UIAlertController(title: nil, message: invalidCredentials, preferredStyle: .Alert)
+                        let okAction: UIAlertAction = UIAlertAction(title: "Okay", style: .Default) { action -> Void in
                         }
                         alert.addAction(okAction)
                         self.presentViewController(alert, animated: true, completion: nil)
@@ -83,7 +83,7 @@ class LoginViewController: UIViewController {
                     // failed to connect
                     let connectionMsg = NSLocalizedString("connectionMsg", comment: "")
                     let alert =  UIAlertController(title: nil, message: connectionMsg, preferredStyle: .Alert)
-                    let okAction: UIAlertAction = UIAlertAction(title: "OK", style: .Default) { action -> Void in
+                    let okAction: UIAlertAction = UIAlertAction(title: "Okay", style: .Default) { action -> Void in
                     }
                     alert.addAction(okAction)
                     self.presentViewController(alert, animated: true, completion: nil)
@@ -94,7 +94,4 @@ class LoginViewController: UIViewController {
         
     }
     
-    
-    @IBAction func onRegisterTap(sender: AnyObject) {
-    }
 }
