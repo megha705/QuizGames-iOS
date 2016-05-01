@@ -9,7 +9,7 @@
 import UIKit
 import Alamofire
 
-class AddQuizViewController: UIViewController {
+class AddQuizViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var quizType: UISegmentedControl!
     @IBOutlet weak var quizImg: UITextField!
     @IBOutlet weak var multipleChoices: UISwitch!
@@ -24,7 +24,7 @@ class AddQuizViewController: UIViewController {
     @IBOutlet weak var multipleAnswerContainer: UIStackView!
     @IBOutlet weak var addButtonTopConstant: NSLayoutConstraint!
     @IBOutlet weak var add: UIButton!
-    
+    var contentMoved = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +32,23 @@ class AddQuizViewController: UIViewController {
         add.layer.cornerRadius = 5
         add.layer.borderWidth = 1
         add.layer.borderColor = view.tintColor.CGColor
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(AddQuizViewController.keyboardWillShow(_:)), name: UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(AddQuizViewController.keyboardWillHide(_:)), name: UIKeyboardWillHideNotification, object: nil)
+        
+        quizImg.delegate = self
+        quizImg.tag = 1
+        singleAnswer.delegate = self
+        singleAnswer.tag = 2
+        choice1.delegate = self
+        choice1.tag = 3
+        choice2.delegate = self
+        choice2.tag = 4
+        choice3.delegate = self
+        choice3.tag = 5
+        choice4.delegate = self
+        choice4.tag = 6
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -179,5 +196,52 @@ class AddQuizViewController: UIViewController {
                 self.add.enabled = true
         }
         
+    }
+    
+    func keyboardWillShow(notification: NSNotification) {
+        if multipleChoices.on && contentMoved == false {
+            self.view.frame.origin.y -= 70
+            contentMoved = true
+        }
+    }
+    
+    func keyboardWillHide(notification: NSNotification) {
+        
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        switch textField.tag {
+        case 1:
+            if multipleChoices.on {
+                choice1.becomeFirstResponder()
+            } else {
+                singleAnswer.becomeFirstResponder()
+            }
+        case 2:
+            textField.resignFirstResponder()
+            onAddTap(textField)
+            if contentMoved == true {
+                self.view.frame.origin.y += 70
+                contentMoved = false
+            }
+        case 3:
+            textField.resignFirstResponder()
+            choice2.becomeFirstResponder()
+        case 4:
+            textField.resignFirstResponder()
+            choice3.becomeFirstResponder()
+        case 5:
+            textField.resignFirstResponder()
+            choice4.becomeFirstResponder()
+        case 6:
+            textField.resignFirstResponder()
+            if contentMoved == true {
+                self.view.frame.origin.y += 70
+                contentMoved = false
+            }
+        default: break
+        }
+        
+        return true
     }
 }
