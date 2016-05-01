@@ -108,9 +108,6 @@ class QuizPageViewController: UIViewController, UIPageViewControllerDataSource {
                     }
                     
                     self.pageViewController.setViewControllers([self.getViewControllerAtIndex(0)] as [UIViewController], direction: UIPageViewControllerNavigationDirection.Forward, animated: false, completion: nil)
-                    if self.timedQuiz == 1 {
-                        self.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(QuizPageViewController.counter), userInfo: nil, repeats: true)
-                    }
                     
                 } else {
                     // failed to connect
@@ -142,6 +139,8 @@ class QuizPageViewController: UIViewController, UIPageViewControllerDataSource {
             if pageIndex == MAX_QUESTIONS - 1 {
                 performSegueWithIdentifier("showScore", sender: nil)
             } else {
+                // stop our timer
+                timer.invalidate()
                 self.pageViewController.setViewControllers([self.getViewControllerAtIndex(pageIndex+1)] as [UIViewController], direction: UIPageViewControllerNavigationDirection.Forward, animated: true, completion: nil)
                 // pageIndex starts from zero that's why we add +2
                 let questionPosition = String(format: NSLocalizedString("questionPosition", comment: ""), String(pageIndex+2), String(20))
@@ -187,6 +186,8 @@ class QuizPageViewController: UIViewController, UIPageViewControllerDataSource {
     
     // This is called from the child view when the user taps on one of the buttons
     func onSelectionButtonTap(correctAnswer: Int) {
+        // stop our timer
+        timer.invalidate()
         if correctAnswer == 1 {
             score += (MAX_POINTS / MAX_TIME) * (MAX_TIME - elapsedTime);
             correctAnswers += 1;
@@ -224,6 +225,8 @@ class QuizPageViewController: UIViewController, UIPageViewControllerDataSource {
     }
     
     func onSingleAnswerClick(correctAnswer: String, userInput: String) {
+        // stop our timer
+        timer.invalidate()
         if correctAnswer.lowercaseString == userInput.lowercaseString {
             score += 150;
             correctAnswers += 1;
@@ -245,6 +248,11 @@ class QuizPageViewController: UIViewController, UIPageViewControllerDataSource {
             timeleftLabel.text = timeLeft
         }
         
+    }
+    
+    func restartTimer() {
+        timer.invalidate()
+        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(QuizPageViewController.counter), userInfo: nil, repeats: true)
     }
     
 }

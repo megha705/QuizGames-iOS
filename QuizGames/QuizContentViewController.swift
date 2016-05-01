@@ -25,7 +25,17 @@ class QuizContentViewController: UIViewController {
         super.viewDidLoad()
         var buttons = [selection1, selection2, selection3, selection4]
         quizChoices = quizChoices?.shuffle()
-        questionImg.kf_setImageWithURL(NSURL(string: quizImg!)!)
+        questionImg.kf_setImageWithURL(NSURL(string: quizImg!)!, placeholderImage: nil,
+                                       optionsInfo: nil,
+                                       progressBlock: { (receivedSize, totalSize) -> () in
+            },
+                                       completionHandler: { (image, error, cacheType, imageURL) -> () in
+                                        if let quizPageVC = self.parentViewController?.parentViewController as? QuizPageViewController {
+                                            if quizPageVC.timedQuiz == 1 {
+                                                quizPageVC.restartTimer()
+                                            }
+                                        }
+        })
         
         if (quizChoices?.count == 4) {
             for i in 0 ..< buttons.count {
