@@ -32,13 +32,14 @@ class RegisterViewController: UIViewController {
     @IBAction func onSubmitTap(sender: AnyObject) {
         let okAction: UIAlertAction = UIAlertAction(title: "Okay", style: .Default) { action -> Void in
         }
-        let tempString = username.text!.stringByReplacingOccurrencesOfString(" ", withString: "")
-        if tempString  == "" {
+        let tempNickname = username.text!.stringByReplacingOccurrencesOfString(" ", withString: "")
+        let tempPassword = password.text!.stringByReplacingOccurrencesOfString(" ", withString: "")
+        if tempNickname  == "" {
             let nicknameEmpty = NSLocalizedString("nicknameEmpty", comment: "")
             let alert =  UIAlertController(title: nil, message: nicknameEmpty, preferredStyle: .Alert)
             alert.addAction(okAction)
             self.presentViewController(alert, animated: true, completion: nil)
-        } else if password.text == "" {
+        } else if tempPassword == "" {
             let passwordEmpty = NSLocalizedString("passwordEmpty", comment: "")
             let alert =  UIAlertController(title: nil, message: passwordEmpty, preferredStyle: .Alert)
             alert.addAction(okAction)
@@ -49,6 +50,7 @@ class RegisterViewController: UIViewController {
             alert.addAction(okAction)
             self.presentViewController(alert, animated: true, completion: nil)
         } else {
+            submit.enabled = false
             let params = [
                 "username": username.text!,
                 "password": password.text!
@@ -79,6 +81,7 @@ class RegisterViewController: UIViewController {
                         alert.addAction(okAction)
                         self.presentViewController(alert, animated: true, completion: nil)
                     }
+                    self.submit.enabled = true
                     
             }
             

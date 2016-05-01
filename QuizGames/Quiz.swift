@@ -17,4 +17,25 @@ class Quiz {
     func addQuizChoice(quizChoice: QuizChoice) {
         quizChoices.append(quizChoice)
     }
+    
+    func toJSON() -> NSDictionary {
+        var choices: [NSDictionary] = []
+        for i in 0 ..< quizChoices.count {
+            let choice: NSDictionary = [
+                "choiceId" : (quizChoices[i].choiceId ?? 0)!,
+                "choice" : quizChoices[i].choice!,
+                "isRightChoice" : quizChoices[i].isRightChoice!
+            ]
+            choices.append(choice)
+        }
+        
+        let quiz: NSDictionary = [
+            "quizId" : (quizId ?? 0)!,
+            "quizImage": quizImage!,
+            "quizType": quizType!,
+            "quizChoices": choices
+        ]
+        
+        return quiz
+    }
 }
