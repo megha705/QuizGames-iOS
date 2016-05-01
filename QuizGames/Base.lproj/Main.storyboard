@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
         <!--About-->
@@ -129,14 +130,22 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="QuizGames" id="STR-sz-b4a">
-                        <barButtonItem key="rightBarButtonItem" image="icon_logout" id="v65-kQ-doL">
-                            <connections>
-                                <action selector="onLogoutTap:" destination="BYZ-38-t0r" id="b19-DT-Dhr"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem image="icon_logout" id="v65-kQ-doL">
+                                <connections>
+                                    <action selector="onLogoutTap:" destination="BYZ-38-t0r" id="b19-DT-Dhr"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="add" id="xxj-o5-a4L">
+                                <connections>
+                                    <segue destination="HJO-nm-Tzp" kind="show" id="HbO-t0-aCC"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="aboutButton" destination="WhT-qx-Cy0" id="K2o-nn-dgt"/>
+                        <outlet property="addButton" destination="xxj-o5-a4L" id="mUA-HC-XgK"/>
                         <outlet property="playButton" destination="FQb-nx-k5l" id="NgG-He-Slg"/>
                         <outlet property="topScoresButton" destination="a1P-K2-dmu" id="kpM-XW-fXD"/>
                         <segue destination="Ytp-PK-mwQ" kind="presentation" identifier="showLoginView" id="ZnU-JB-ewC"/>
@@ -145,6 +154,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2189" y="429"/>
+        </scene>
+        <!--Add Quiz View Controller-->
+        <scene sceneID="ssB-tC-h7W">
+            <objects>
+                <viewController id="HJO-nm-Tzp" customClass="AddQuizViewController" customModule="QuizGames" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Afl-a4-Yh7"/>
+                        <viewControllerLayoutGuide type="bottom" id="Lis-vI-twN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XSl-CG-eKs">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QkT-Hb-HSu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2189" y="1303"/>
         </scene>
         <!--Quiz Time View Controller-->
         <scene sceneID="4V8-kt-CYX">
@@ -541,7 +568,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L9f-kS-jxQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3015" y="1506"/>
+            <point key="canvasLocation" x="3266" y="1538"/>
         </scene>
         <!--Top Scores Child View Controller-->
         <scene sceneID="h1I-EP-PKs">
@@ -951,8 +978,8 @@
         <image name="icon_logout" width="22" height="22"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="h4K-Au-tI8"/>
-        <segue reference="dMO-mz-JTH"/>
+        <segue reference="Oat-kK-3Rk"/>
         <segue reference="olV-aL-1x6"/>
+        <segue reference="ZnU-JB-ewC"/>
     </inferredMetricsTieBreakers>
 </document>

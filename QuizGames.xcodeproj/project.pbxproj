@@ -24,6 +24,7 @@
 		85790F291CCA8D9200C7022C /* QuizGamesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85790F281CCA8D9200C7022C /* QuizGamesTests.swift */; };
 		859A5BE31CCE4B3900C6AE8B /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859A5BE21CCE4B3900C6AE8B /* ScoreViewController.swift */; };
 		85FA3F7B1CD608B5003418A0 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FA3F7A1CD608B5003418A0 /* RegisterViewController.swift */; };
+		85FA3F7D1CD61172003418A0 /* AddQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FA3F7C1CD61172003418A0 /* AddQuizViewController.swift */; };
 		85FAAD041CCB70360091EC9C /* QuizGamesSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FAAD031CCB70360091EC9C /* QuizGamesSelectionViewController.swift */; };
 		85FAAD361CCB96BF0091EC9C /* QuizPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FAAD351CCB96BF0091EC9C /* QuizPageViewController.swift */; };
 		85FAAD381CCB96DB0091EC9C /* QuizContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FAAD371CCB96DB0091EC9C /* QuizContentViewController.swift */; };
@@ -68,6 +69,7 @@
 		85790F2A1CCA8D9200C7022C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		859A5BE21CCE4B3900C6AE8B /* ScoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
 		85FA3F7A1CD608B5003418A0 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		85FA3F7C1CD61172003418A0 /* AddQuizViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddQuizViewController.swift; sourceTree = "<group>"; };
 		85FAAD031CCB70360091EC9C /* QuizGamesSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizGamesSelectionViewController.swift; sourceTree = "<group>"; };
 		85FAAD351CCB96BF0091EC9C /* QuizPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizPageViewController.swift; sourceTree = "<group>"; };
 		85FAAD371CCB96DB0091EC9C /* QuizContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizContentViewController.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				8532E26E1CCF7F7300BB0EE9 /* AboutViewController.swift */,
+				85FA3F7C1CD61172003418A0 /* AddQuizViewController.swift */,
 				854249781CD52F6600B53F38 /* LoginViewController.swift */,
 				85790F151CCA8D9200C7022C /* MainViewController.swift */,
 				85FAAD371CCB96DB0091EC9C /* QuizContentViewController.swift */,
@@ -371,6 +374,7 @@
 				85FAAD361CCB96BF0091EC9C /* QuizPageViewController.swift in Sources */,
 				854249771CD4C67600B53F38 /* QuizTimeViewController.swift in Sources */,
 				854A19681CCBDC11004C5B9C /* QuizChoice.swift in Sources */,
+				85FA3F7D1CD61172003418A0 /* AddQuizViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

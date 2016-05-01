@@ -47,3 +47,7 @@
 "usernameExists" = "Username exists. Please try again.";
 
 
+// MainViewController
+"logoutAsk" = "Are you sure you want to logout?";
+"yes" = "Yes";
+"no" = "No";
