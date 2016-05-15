@@ -131,7 +131,6 @@ class QuizPageViewController: UIViewController, UIPageViewControllerDataSource {
     }
     
     func counter() {
-        elapsedTime += 1
         if (MAX_TIME-elapsedTime == 0) {
             elapsedTime = 0
             let vc = pageViewController.viewControllers![0] as! QuizContentViewController
@@ -149,6 +148,7 @@ class QuizPageViewController: UIViewController, UIPageViewControllerDataSource {
         }
         let timeLeft = String(format: NSLocalizedString("timeLeft", comment: ""), String(MAX_TIME-elapsedTime))
         timeleftLabel.text = timeLeft
+        elapsedTime += 1
     }
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController?  {
@@ -204,9 +204,6 @@ class QuizPageViewController: UIViewController, UIPageViewControllerDataSource {
             // pageIndex starts from zero that's why we add +2
             let questionPosition = String(format: NSLocalizedString("questionPosition", comment: ""), String(pageIndex+2), String(20))
             pageLabel.text = questionPosition
-            
-            let timeLeft = String(format: NSLocalizedString("timeLeft", comment: ""), String(MAX_TIME-elapsedTime))
-            timeleftLabel.text = timeLeft
         }
         
     }
@@ -243,9 +240,6 @@ class QuizPageViewController: UIViewController, UIPageViewControllerDataSource {
             // pageIndex starts from zero that's why we add +2
             let questionPosition = String(format: NSLocalizedString("questionPosition", comment: ""), String(pageIndex+2), String(20))
             pageLabel.text = questionPosition
-            
-            let timeLeft = String(format: NSLocalizedString("timeLeft", comment: ""), String(MAX_TIME-elapsedTime))
-            timeleftLabel.text = timeLeft
         }
         
     }

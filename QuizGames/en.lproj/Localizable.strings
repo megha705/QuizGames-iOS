@@ -54,6 +54,6 @@
 
 // AddQuizViewController
 "quizImgEmpty" = "Quiz image can\'t be empty. Please try again.";
-"quizImgInvalid" = "Invalid quiz image URL. Please try again";
+"quizImgInvalid" = "Invalid quiz image URL. Please try again.";
 "quizAnswerEmpty" = "Quiz answer can\'t be empty. Please try again.";
 "quizChoiceEmpty" = "Quiz choice can\'t be empty. Please try again.";
