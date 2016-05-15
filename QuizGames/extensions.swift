@@ -120,3 +120,23 @@ extension NSDate {
     }
     
 }
+
+extension UINavigationController {
+    public override func shouldAutorotate() -> Bool {
+        return visibleViewController!.shouldAutorotate()
+    }
+    
+    public override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
+        return (visibleViewController?.supportedInterfaceOrientations())!
+    }
+}
+
+extension UIAlertController {
+    public override func shouldAutorotate() -> Bool {
+        return false
+    }
+    
+    public override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.Portrait
+    }
+}

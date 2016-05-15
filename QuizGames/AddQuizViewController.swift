@@ -252,4 +252,12 @@ class AddQuizViewController: UIViewController, UITextFieldDelegate {
         
         return true
     }
+    
+    override func shouldAutorotate() -> Bool {
+        return true
+    }
+    
+    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.Portrait
+    }
 }

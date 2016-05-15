@@ -257,4 +257,12 @@ class QuizPageViewController: UIViewController, UIPageViewControllerDataSource {
         timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(QuizPageViewController.counter), userInfo: nil, repeats: true)
     }
     
+    override func shouldAutorotate() -> Bool {
+        return false
+    }
+    
+    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.Portrait
+    }
+    
 }

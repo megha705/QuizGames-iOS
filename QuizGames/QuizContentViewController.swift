@@ -17,7 +17,7 @@
 import UIKit
 import Kingfisher
 
-class QuizContentViewController: UIViewController {
+class QuizContentViewController: UIViewController, UITextFieldDelegate {
     var pageIndex: Int = 0
     var quizChoices: [QuizChoice]?
     var quizImg: String?
@@ -27,7 +27,7 @@ class QuizContentViewController: UIViewController {
     @IBOutlet weak var selection4: UIButton!
     @IBOutlet weak var questionImg: UIImageView!
     @IBOutlet weak var answer: UITextField!
-    @IBOutlet weak var singleAnswer: UIButton!
+    var contentMoved = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,8 +59,11 @@ class QuizContentViewController: UIViewController {
             selection3.hidden = true
             selection4.hidden = true
             answer.hidden = false
-            singleAnswer.hidden = false
         }
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(AddQuizViewController.keyboardWillShow(_:)), name: UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(AddQuizViewController.keyboardWillHide(_:)), name: UIKeyboardWillHideNotification, object: nil)
+        answer.delegate = self
         
     }
     
@@ -76,10 +79,29 @@ class QuizContentViewController: UIViewController {
         }
     }
     
-    @IBAction func onSingleAnswerTap(sender: AnyObject) {
+    func onSingleAnswerTap(sender: AnyObject) {
         if let quizPageVC = parentViewController?.parentViewController as? QuizPageViewController {
             quizPageVC.onSingleAnswerClick(quizChoices![0].choice!, userInput: answer.text!)
         }
+    }
+    
+    func keyboardWillShow(notification: NSNotification) {
+        if contentMoved == false {
+            self.view.frame.origin.y -= 70
+            contentMoved = true
+        }
+    }
+    
+    func keyboardWillHide(notification: NSNotification) {
+        
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        self.view.frame.origin.y += 70
+        onSingleAnswerTap(textField)
+        contentMoved = false
+        return true
     }
     
 }

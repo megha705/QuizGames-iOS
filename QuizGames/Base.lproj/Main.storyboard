@@ -638,31 +638,17 @@
                             <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type your answer here..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EiX-ON-JCx">
                                 <rect key="frame" x="20" y="401" width="560" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d9X-xp-VHh">
-                                <rect key="frame" x="20" y="446" width="560" height="36"/>
-                                <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Submit">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="onSingleAnswerTap:" destination="pkO-mW-Xxq" eventType="touchUpInside" id="Cjv-7w-3tk"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="d9X-xp-VHh" firstAttribute="top" secondItem="Ea5-Dg-FKm" secondAttribute="bottom" constant="71" id="CKQ-gj-eOm"/>
                             <constraint firstItem="EiX-ON-JCx" firstAttribute="top" secondItem="Ea5-Dg-FKm" secondAttribute="bottom" constant="26" id="J6L-EJ-QQF"/>
                             <constraint firstItem="fG6-Ho-x8T" firstAttribute="leading" secondItem="Ea5-Dg-FKm" secondAttribute="leading" id="JMO-Kc-SeC"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="d9X-xp-VHh" secondAttribute="trailing" id="RPT-gv-zmc"/>
                             <constraint firstItem="fG6-Ho-x8T" firstAttribute="top" secondItem="Ea5-Dg-FKm" secondAttribute="bottom" constant="25" id="ViE-tX-3J8"/>
                             <constraint firstItem="Ea5-Dg-FKm" firstAttribute="top" secondItem="bUD-o4-7bz" secondAttribute="bottom" constant="50" id="ZIZ-qZ-PYc"/>
                             <constraint firstItem="EiX-ON-JCx" firstAttribute="leading" secondItem="l9x-Mw-yWL" secondAttribute="leadingMargin" id="aGk-fl-8h1"/>
                             <constraint firstItem="Ea5-Dg-FKm" firstAttribute="trailing" secondItem="l9x-Mw-yWL" secondAttribute="trailingMargin" id="eTw-Bp-Nb1"/>
-                            <constraint firstItem="d9X-xp-VHh" firstAttribute="leading" secondItem="l9x-Mw-yWL" secondAttribute="leadingMargin" id="ecA-Oh-lT6"/>
                             <constraint firstItem="Ea5-Dg-FKm" firstAttribute="leading" secondItem="l9x-Mw-yWL" secondAttribute="leadingMargin" id="fsb-8h-cA4"/>
                             <constraint firstAttribute="trailingMargin" secondItem="EiX-ON-JCx" secondAttribute="trailing" id="sXj-To-ysF"/>
                             <constraint firstItem="MXq-ws-sIX" firstAttribute="top" secondItem="Ea5-Dg-FKm" secondAttribute="bottom" constant="225" id="wkc-t4-lPp"/>
@@ -676,7 +662,6 @@
                         <outlet property="selection2" destination="8r5-u2-nSo" id="05R-cx-IHs"/>
                         <outlet property="selection3" destination="u2X-2f-L1g" id="ZQT-HL-99R"/>
                         <outlet property="selection4" destination="8gv-lb-FNL" id="ZPc-5a-kiM"/>
-                        <outlet property="singleAnswer" destination="d9X-xp-VHh" id="mMV-lu-OFC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Ii-Bb-mxO" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -994,7 +979,7 @@
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vdc-M0-bJT">
                                                 <rect key="frame" x="93" y="0.0" width="180" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -1172,8 +1157,8 @@
         <image name="icon_logout" width="22" height="22"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ZnU-JB-ewC"/>
         <segue reference="h4K-Au-tI8"/>
+        <segue reference="dMO-mz-JTH"/>
         <segue reference="olV-aL-1x6"/>
     </inferredMetricsTieBreakers>
 </document>
