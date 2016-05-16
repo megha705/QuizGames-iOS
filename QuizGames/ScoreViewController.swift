@@ -21,6 +21,7 @@ class ScoreViewController: UIViewController {
     var score: Int?
     var quizType: String?
     var correctAnswers: Int?
+    var timedQuiz: Int?
     @IBOutlet weak var cancelBtn: UIButton!
     @IBOutlet weak var submitBtn: UIButton!
     @IBOutlet weak var scoreLbl: UILabel!
@@ -42,6 +43,12 @@ class ScoreViewController: UIViewController {
         
         let answeredQuestions = String(format: NSLocalizedString("answeredQuestions", comment: ""), String(correctAnswers!))
         ansQuestionsLbl.text = answeredQuestions
+        
+        if timedQuiz == 0 {
+            submitBtn.hidden = true
+        } else {
+            submitBtn.hidden = false
+        }
         
     }
     

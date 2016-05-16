@@ -226,6 +226,7 @@ class QuizPageViewController: UIViewController, UIPageViewControllerDataSource {
             destVc.score = score
             destVc.correctAnswers = correctAnswers
             destVc.quizType = quizType
+            destVc.timedQuiz = timedQuiz
         }
     }
     
